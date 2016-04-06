@@ -11,6 +11,8 @@
 		CA7B07D61CB2C9A100A473CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7B07D41CB2C9A100A473CF /* Main.storyboard */; };
 		CA7B07D81CB2C9A100A473CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7B07D71CB2C9A100A473CF /* Assets.xcassets */; };
 		CA7B07DB1CB2C9A100A473CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7B07D91CB2C9A100A473CF /* LaunchScreen.storyboard */; };
+		CAE88CE61CB5816000B96FC2 /* CalendarApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CE51CB5816000B96FC2 /* CalendarApi.swift */; };
+		CAE88CE81CB5903100B96FC2 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */; };
 		CAE8A57C1CB44B6200B4529F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAE8A5791CB44B6200B4529F /* SWRevealViewController.m */; };
 		CAE8A5811CB44C7100B4529F /* WaffleMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8A5801CB44C7100B4529F /* WaffleMenuViewController.swift */; };
 		CAE8A5831CB452DF00B4529F /* NaviTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE8A5821CB452DF00B4529F /* NaviTableViewController.swift */; };
@@ -26,6 +28,8 @@
 		CA7B07D71CB2C9A100A473CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA7B07DA1CB2C9A100A473CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA7B07DC1CB2C9A100A473CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAE88CE51CB5816000B96FC2 /* CalendarApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarApi.swift; sourceTree = "<group>"; };
+		CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarEvent.swift; path = ../CalendarEvent.swift; sourceTree = "<group>"; };
 		CAE8A5781CB44B6100B4529F /* WaffleLuv-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WaffleLuv-Bridging-Header.h"; sourceTree = "<group>"; };
 		CAE8A5791CB44B6200B4529F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		CAE8A57A1CB44B6200B4529F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -69,14 +73,24 @@
 			isa = PBXGroup;
 			children = (
 				CAFA9D041CB4659F009A3FA4 /* ViewControllers */,
-				CA7B07D01CB2C9A100A473CF /* AppDelegate.swift */,
+				CAE88CE41CB5804F00B96FC2 /* Controller */,
 				CA7B07D41CB2C9A100A473CF /* Main.storyboard */,
+				CAE88CE51CB5816000B96FC2 /* CalendarApi.swift */,
+				CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */,
+				CA7B07D01CB2C9A100A473CF /* AppDelegate.swift */,
 				CA7B07D71CB2C9A100A473CF /* Assets.xcassets */,
 				CA7B07D91CB2C9A100A473CF /* LaunchScreen.storyboard */,
 				CA7B07DC1CB2C9A100A473CF /* Info.plist */,
 				CAE8A57D1CB44B7B00B4529F /* SW Reveal View Controller */,
 			);
 			path = WaffleLuv;
+			sourceTree = "<group>";
+		};
+		CAE88CE41CB5804F00B96FC2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		CAE8A57D1CB44B7B00B4529F /* SW Reveal View Controller */ = {
@@ -179,8 +193,10 @@
 			files = (
 				CAE8A5811CB44C7100B4529F /* WaffleMenuViewController.swift in Sources */,
 				CA7B07D11CB2C9A100A473CF /* AppDelegate.swift in Sources */,
+				CAE88CE81CB5903100B96FC2 /* CalendarEvent.swift in Sources */,
 				CAFA9D011CB4581A009A3FA4 /* AboutViewController.swift in Sources */,
 				CAE8A5831CB452DF00B4529F /* NaviTableViewController.swift in Sources */,
+				CAE88CE61CB5816000B96FC2 /* CalendarApi.swift in Sources */,
 				CAE8A57C1CB44B6200B4529F /* SWRevealViewController.m in Sources */,
 				CAFA9CFF1CB457C9009A3FA4 /* LocationsViewController.swift in Sources */,
 			);

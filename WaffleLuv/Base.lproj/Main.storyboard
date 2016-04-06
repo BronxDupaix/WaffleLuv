@@ -35,7 +35,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="t71-MC-jGd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection id="RgL-hz-KbE">
                                 <cells>
@@ -117,7 +117,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-XZ-BgO">
-                                                    <rect key="frame" x="75" y="11" width="46.5" height="21"/>
+                                                    <rect key="frame" x="85" y="11" width="46.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -126,7 +126,7 @@
                                             <color key="backgroundColor" red="0.72702068090438843" green="0.3016013503074646" blue="0.91400390863418579" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
                                                 <constraint firstItem="Kfk-XZ-BgO" firstAttribute="centerY" secondItem="rwY-Qz-bzc" secondAttribute="centerY" id="GwZ-Ou-uwp"/>
-                                                <constraint firstItem="Kfk-XZ-BgO" firstAttribute="leading" secondItem="rwY-Qz-bzc" secondAttribute="leading" constant="75" id="dSQ-rm-pXy"/>
+                                                <constraint firstItem="Kfk-XZ-BgO" firstAttribute="leading" secondItem="rwY-Qz-bzc" secondAttribute="leading" constant="85" id="dSQ-rm-pXy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

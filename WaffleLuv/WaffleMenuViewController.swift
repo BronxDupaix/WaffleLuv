@@ -12,9 +12,13 @@ class WaffleMenuViewController: UIViewController {
 
   
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
+    var calendarApi = CalendarAPI()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        calendarApi.fetchCalendar() 
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
