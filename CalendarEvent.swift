@@ -17,6 +17,10 @@ class CalendarEvent {
     
     var endDate = NSDate()
     
+    var latitiude: Double = 0.00
+    
+    var longitude: Double = 0.00 
+    
     let dateFormatter = NSDateFormatter()
     
     init() {

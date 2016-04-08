@@ -9,10 +9,11 @@
 import UIKit
 
 class NaviTableViewController: UITableViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
   

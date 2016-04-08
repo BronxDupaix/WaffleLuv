@@ -11,6 +11,8 @@ import MapKit
 import CoreLocation
 
 
+//MARK: - Event Protocol
+
 protocol EventProtocol{
     
     func passEvent(eventsArray: [CalendarEvent]) 
@@ -18,6 +20,9 @@ protocol EventProtocol{
 }
 
 class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    
+    //MARK: - Variables
     
     var locationManager = CLLocationManager()
 
@@ -31,12 +36,31 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     var currentEvents = [CalendarEvent]()
     
+    var dateFormatter = NSDateFormatter()
+    
+    //MARK: - View did functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        createMKPins()
+        print("Map view did load")
+        
+        for event in DataStore.sharedInstance.currentEvents {
+            
+            
+            print(event.location)
+            
+            print(event.latitiude)
+            
+            print(event.longitude)
+            
+            
+            createMKPins(event)
+        }
+        
+       
 
-         locationManager.delegate = self
+        locationManager.delegate = self
         
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     
@@ -46,25 +70,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        
-        
-//        geocoding("\(currentEvents.location)") {
-//            
-//            (latitude: Double, longitude: Double) in
-//            
-//            
-//            print(latitude)
-//            let lat: Double = latitude
-//            
-//            print(longitude)
-//            
-//            let long: Double = longitude
-//            
-//            self.Api.fetchWeather(lat ,longitude:  long)
-//        }
-
-
-       
     }
 
     override func viewDidAppear(animated: Bool) {
@@ -79,6 +84,8 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         locationsMap.showsUserLocation = true
     }
     
+    
+    //MARK: - Locations Manager functions and Center map
     
     
     func centerMapOnLocation(location: CLLocation) {
@@ -121,7 +128,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
             
             if let center = coordinate {
                 
-               let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+               let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7))
                 
                self.locationsMap.setRegion(region, animated: true)
                 
@@ -130,8 +137,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
                 currentLocation.coordinate = CLLocationCoordinate2D(latitude: center.latitude, longitude: center.longitude)
                 
                 currentLocation.title = "Your current location"
-                
-                
                 
                 self.locationsMap.addAnnotation(currentLocation)
                 
@@ -150,20 +155,27 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     
     
-//    func geocoding(location: String, completion: (Double, Double) -> ()) {
-//        CLGeocoder().geocodeAddressString(location) { (placemarks, error) in
-//            if placemarks?.count > 0 {
-//                let placemark = placemarks?[0]
-//                let location = placemark!.location
-//                let coordinate = location?.coordinate
-//                completion((coordinate?.latitude)!, (coordinate?.longitude)!)
-//            }
-//        }
-//    }
+       
+    
+    //MARK: - MKPins function
 
     
-    
-    func createMKPins() {
+    func createMKPins(event: CalendarEvent) {
+        
+        let truck = MKPointAnnotation()
+        
+        truck.coordinate = CLLocationCoordinate2D(latitude: event.latitiude, longitude: event.longitude)
+        
+        truck.title = event.location
+        
+        dateFormatter.dateFormat = "hh:mm a"
+        
+        let start = dateFormatter.stringFromDate(event.startDate)
+        let end = dateFormatter.stringFromDate(event.endDate)
+        
+        truck.subtitle = "\(start) - \(end)"
+        
+        locationsMap.addAnnotation(truck)
         
         let midvale = MKPointAnnotation()
         

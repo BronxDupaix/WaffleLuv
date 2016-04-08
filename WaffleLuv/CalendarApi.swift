@@ -41,7 +41,6 @@ class CalendarAPI {
 
     
     func checkForCurrentEvents(item: CalendarEvent)  {
-        
        // print("Number of items in array \(events.count)")
         
             let endTime = item.endDate
@@ -68,6 +67,8 @@ class CalendarAPI {
                     
                   //  filteredArray.append(item)
                     
+                    if item.location != "" {
+                    
                     print(item.location)
                     
                     print(item.startDate)
@@ -75,12 +76,14 @@ class CalendarAPI {
                     print(item.endDate)
                     
                     print("item appended")
-
-                    self.currentEvents.append(item)
+                        
+                        DataStore.sharedInstance.currentEvents.append(item)
+                        
+                        DataStore.sharedInstance.numberOFEvents()
+                        
+                        DataStore.sharedInstance.geocodeLocations()
+                    }
                     
-                    print("Number of current events\(currentEvents.count)")
-                    
-
                 }
                 
             }
@@ -140,7 +143,7 @@ class CalendarAPI {
                                     
                                     
                                     
-                                    print("Passed items array to current events check")
+//                                    print("Passed items array to current events check")
 
                                 }
                                 

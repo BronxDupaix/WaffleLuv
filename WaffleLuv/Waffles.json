@@ -1,0 +1,80 @@
+
+{
+	"waffles": [
+        {
+			"name": "Daily Special",
+			"price": "$4.64",
+			"description": "VARIES WEEKLY",
+			"photo": "dailySpecial"
+		}, {
+			"name": "Plain Liege",
+			"price": "$3.48",
+			"description": "",
+			"photo": "plainLiege"
+		},
+    {
+			"name": "The Churro Waffle",
+			"price": "$3.94",
+			"description": "CINNAMON & SUGAR",
+			"photo": "churroWaffle"
+		},
+    {
+			"name": "The Cinna Love",
+			"price": "$5.56",
+			"description": "CINNAMON BUTTER & CREAM CHEESE FROSTING",
+			"photo": "churroLove"
+		},
+    {
+			"name": "The Red Wonder",
+			"price": "$7.88",
+			"description": "BISCOFF, STRAWBERRIES, RASPBERRIES, & CREAM",
+			"photo": "redWonder"
+		},
+    {
+			"name": "The Works",
+			"price": "$7.42",
+			"description": "BISCOFF, CREAM, YOUR CHOICE OF FRUIT",
+			"photo": "theWorks"
+		},
+    {
+			"name": "Nutella Love",
+			"price": "$7.42",
+			"description": "NUTELLA, CREAM, YOUR CHOICE OF FRUIT",
+			"photo": "nutellaLove"
+		},
+    {
+			"name": "Banana Cream Pie",
+			"price": "$7.19",
+			"description": "CHOCOLATE FILLED W/ BANANAS & CREAM",
+			"photo": "bananaCream"
+		},
+    {
+			"name": "Dulce de Liege",
+			"price": "$7.88",
+			"description": "CHURRO WAFFLE W/ FRIED ICE CREAM & DULCE DE LECHE",
+			"photo": "dulceDeLiege"
+		},
+    {
+			"name": "The Sunshine",
+			"price": "$7.88",
+			"description": "LEMON CURD, RASPBERRIES, & CREAM",
+			"photo": "sunshine"
+		},
+
+    {
+			"name": "Date Waffle",
+			"price": "$14.84",
+			"description": "WAFFLE SANDWICH, BISCOFF, NUTELLA, ALL FRUITS, CREAM",
+			"photo": "dateWaffle"
+		},
+
+    {
+			"name": "Grill Cheese & Bisque",
+			"price": "$9.05",
+			"description": "MUENSTER CHEESE & TOMATO BISQUE",
+			"photo": "grillCheese"
+		}
+
+  
+	]
+}
