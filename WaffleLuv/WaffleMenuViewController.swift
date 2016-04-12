@@ -13,16 +13,22 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
   
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    @IBOutlet weak var waffleMenu: UITableView!
+    
     var calendarApi = CalendarAPI()
     
-    var wafflesArray = [Waffle]()
+    var instaApi = Instagram()
     
+    var wafflesArray = [Waffle]()
+
     //MARK: - View Did load 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         calendarApi.fetchCalendar()
+        
+        instaApi.fetchInstaPhotos() 
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -88,7 +94,6 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             cell.nameLabel.textColor = color
         }
         
-        
         if waffle.name == "The Cinna Love" {
             
             let color = MyColors.getCustomPinkColor()
@@ -101,20 +106,26 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             
             let color = MyColors.getCustomRedColor()
             
-            cell.nameLabel.textColor = color 
+            cell.nameLabel.textColor = color
+            
+            cell.wafflePhoto.image = UIImage(named: "RedWonder")
         }
         
         if waffle.name == "The Works" {
             
             let color = MyColors.getCustomCreamColor()
             
-            cell.nameLabel.textColor = color 
+            cell.nameLabel.textColor = color
+            
+            cell.wafflePhoto.image = UIImage(named: "WaffleWorks") 
         }
         
         if waffle.name == "Nutella Love" {
             
-            
             cell.nameLabel.textColor = UIColor .brownColor()
+            
+            cell.wafflePhoto.image = UIImage(named: "NutellaLove")
+                
         }
         
         if waffle.name == "Banana Cream Pie" {
@@ -137,7 +148,9 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             
             let color = MyColors.getCustomBlueGreenColor()
             
-            cell.nameLabel.textColor = color 
+            cell.nameLabel.textColor = color
+            
+            cell.wafflePhoto.image = UIImage(named: "TheDulce")
         }
         
         if waffle.name == "Date Waffle" {
@@ -170,6 +183,37 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         
         return wafflesArray.count
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+       let waffle = wafflesArray[indexPath.row]
+        
+        toggleWaffle(waffle)
+    }
+    
+     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        let waffle = wafflesArray[indexPath.row]
+        
+        if waffle.isSelected == true {
+            
+            return 150
+            
+        } else {
+            
+            return 35
+        }
+    }
+    
+    func toggleWaffle(waffle: Waffle) {
+        
+        waffle.isSelected = !waffle.isSelected
+        
+        self.waffleMenu.beginUpdates()
+        
+        self.waffleMenu.endUpdates()
+    }
+    
     
     //MARK: - Load JSON
     

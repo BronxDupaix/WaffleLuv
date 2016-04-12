@@ -46,15 +46,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         print("Map view did load")
         
         for event in DataStore.sharedInstance.currentEvents {
-            
-            
-            print(event.location)
-            
-            print(event.latitiude)
-            
-            print(event.longitude)
-            
-            
+
             createMKPins(event)
         }
         
@@ -90,7 +82,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-        regionRadius * 2.0, regionRadius * 2.0)
+        regionRadius * 1.0, regionRadius * 1.0)
         locationsMap.setRegion(coordinateRegion, animated: true)
     }
     
@@ -138,7 +130,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
                 
                 currentLocation.title = "Your current location"
                 
-                self.locationsMap.addAnnotation(currentLocation)
+              //  self.locationsMap.addAnnotation(currentLocation)
                 
                 self.locationsMap.showsUserLocation = true
                 
@@ -155,6 +147,16 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     
     
+    func mapView(mapView: MKMapView, didFailToLocateUserWithError error: NSError) {
+        
+    }
+    
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        
+        print("Annotation clicked") 
+    }
+    
+    
        
     
     //MARK: - MKPins function
@@ -162,7 +164,9 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     func createMKPins(event: CalendarEvent) {
         
-        let truck = MKPointAnnotation()
+        let truck = CustomPointAnnotation()
+        
+        truck.imageName = "truck" 
         
         truck.coordinate = CLLocationCoordinate2D(latitude: event.latitiude, longitude: event.longitude)
         
@@ -177,15 +181,17 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         
         locationsMap.addAnnotation(truck)
         
-        let midvale = MKPointAnnotation()
+        let midvale = CustomPointAnnotation()
         
-        let provo = MKPointAnnotation()
+        let provo = CustomPointAnnotation()
         
-        let bountiful = MKPointAnnotation()
+        let bountiful = CustomPointAnnotation()
         
-        let gilbert = MKPointAnnotation()
+        let gilbert = CustomPointAnnotation() 
         
         gilbert.coordinate = CLLocationCoordinate2D(latitude: 33.300539, longitude: -111.743183)
+        
+        gilbert.imageName = "store"
         
         gilbert.title = "Gilbert AZ Location"
         
@@ -193,17 +199,23 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         
         midvale.coordinate = CLLocationCoordinate2D(latitude: 40.623698, longitude: -111.860071)
         
+        midvale.imageName = "store"
+        
         midvale.title = "Midvale Location"
         
         midvale.subtitle = "1142 Fort Union Blvd #M05, Midvale, UT 84047"
 
         provo.coordinate = CLLocationCoordinate2D(latitude: 40.258434, longitude: -111.674773)
         
+        provo.imageName = "store"
+        
         provo.title = "Provo Location"
         
         provo.subtitle = "1796 N 950 W St, Provo, UT 84604"
         
         bountiful.coordinate = CLLocationCoordinate2D(latitude: 40.891752, longitude: -111.892615)
+        
+        bountiful.imageName = "store"
         
         bountiful.title = "Bountiful Location"
         
@@ -218,6 +230,52 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         locationsMap.addAnnotation(bountiful)
         
         locationsMap.addAnnotation(gilbert)
+        
+        
     }
 
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+    
+        let identifier = "MyPin"
+        
+        if annotation.isKindOfClass(MKUserLocation) {
+            return nil
+        }
+        
+        if !(annotation is CustomPointAnnotation) {
+            return nil
+        }
+        
+        let detailButton: UIButton = UIButton(type: UIButtonType.DetailDisclosure)
+        
+        // Reuse the annotation if possible
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(identifier)
+        
+
+        if annotationView == nil
+        {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "pin")
+            annotationView!.canShowCallout = true
+            
+                        let truckImage = UIImageView(frame: CGRectMake(0, 0, 30, 30))
+            
+                        truckImage.image = UIImage(named: "store") 
+            
+                        annotationView!.image = truckImage.image
+            
+            annotationView!.rightCalloutAccessoryView = detailButton
+        }
+        else
+        {
+            
+            
+            annotationView!.annotation = annotation
+        }
+        
+        let cpa = annotation as? CustomPointAnnotation
+        
+        annotationView!.image = UIImage(named:cpa!.imageName)
+        
+        return annotationView
+    }
 }

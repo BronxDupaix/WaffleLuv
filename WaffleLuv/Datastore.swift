@@ -18,6 +18,8 @@ class DataStore: NSObject {
     
     var currentEvents = [CalendarEvent]()
     
+    var instaPhotos = [InstaPhoto]()
+    
     func numberOFEvents() {
         
         print("Number of events in datastore \(currentEvents.count)")
@@ -48,19 +50,6 @@ class DataStore: NSObject {
             }
         }
     }
-    
-//    func currentEventsLocations(){
-//        
-//        for event in currentEvents{
-//            
-//            print(event.location)
-//            
-//            print(event.latitiude)
-//            
-//            print(event.longitude)
-//        }
-//        
-//    }
     
     func geocoding(location: String, completion: (Double, Double) -> ()) {
         

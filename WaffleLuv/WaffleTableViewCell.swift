@@ -18,5 +18,6 @@ class WaffleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var priceLabel: UILabel!
     
+    @IBOutlet weak var wafflePhoto: UIImageView!
 
 }

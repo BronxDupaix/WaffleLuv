@@ -18,6 +18,8 @@ class Waffle {
     
     var photo: String = ""
     
+    var isSelected: Bool = false 
+    
     
     init() {
         

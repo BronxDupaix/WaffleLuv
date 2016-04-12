@@ -77,6 +77,7 @@ class CalendarAPI {
                     
                     print("item appended")
                         
+                        
                         DataStore.sharedInstance.currentEvents.append(item)
                         
                         DataStore.sharedInstance.numberOFEvents()
@@ -95,6 +96,8 @@ class CalendarAPI {
     
     
     func fetchCalendar() {
+        
+        print("Fetch calendar called") 
         
         for id in calendarIDs {
         
@@ -130,21 +133,10 @@ class CalendarAPI {
                                         
                                         let event = CalendarEvent(dict: item)
                                         
-                                       // self.events.append(event)
-                                        
                                         self.checkForCurrentEvents(event)
                                         
                                         // Pass each individual event into the checkForCurrentEvents and check to see if it meets the requirements?
                                     }
-                                    
-                                   // self.checkForCurrentEvents()
-                                    
-                                    // Continuoulsy checks the array so as soon as it finds a current event if its before all events have been check it will pass again and again into the currents event array
-                                    
-                                    
-                                    
-//                                    print("Passed items array to current events check")
-
                                 }
                                 
                                 

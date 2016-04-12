@@ -13,6 +13,11 @@
 		CA7B07DB1CB2C9A100A473CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7B07D91CB2C9A100A473CF /* LaunchScreen.storyboard */; };
 		CAE58F4D1CB6B97300956EED /* UIColor extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F4C1CB6B97300956EED /* UIColor extension.swift */; };
 		CAE58F4F1CB6CBC100956EED /* Datastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F4E1CB6CBC100956EED /* Datastore.swift */; };
+		CAE58F531CB84A3300956EED /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F521CB84A3300956EED /* CustomAnnotation.swift */; };
+		CAE58F7D1CBC97D000956EED /* InstagramAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F7C1CBC97D000956EED /* InstagramAPI.swift */; };
+		CAE58F7F1CBC981A00956EED /* InstaPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F7E1CBC981A00956EED /* InstaPhoto.swift */; };
+		CAE58F811CBC9AE300956EED /* InstaPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F801CBC9AE300956EED /* InstaPhotosCollectionViewController.swift */; };
+		CAE58F831CBC9F3A00956EED /* photoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F821CBC9F3A00956EED /* photoCollectionViewCell.swift */; };
 		CAE88CE61CB5816000B96FC2 /* CalendarApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CE51CB5816000B96FC2 /* CalendarApi.swift */; };
 		CAE88CE81CB5903100B96FC2 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */; };
 		CAE88CEB1CB6084100B96FC2 /* Waffles.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE88CEA1CB6084100B96FC2 /* Waffles.json */; };
@@ -35,6 +40,11 @@
 		CA7B07DC1CB2C9A100A473CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAE58F4C1CB6B97300956EED /* UIColor extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor extension.swift"; sourceTree = "<group>"; };
 		CAE58F4E1CB6CBC100956EED /* Datastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datastore.swift; sourceTree = "<group>"; };
+		CAE58F521CB84A3300956EED /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
+		CAE58F7C1CBC97D000956EED /* InstagramAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramAPI.swift; sourceTree = "<group>"; };
+		CAE58F7E1CBC981A00956EED /* InstaPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaPhoto.swift; sourceTree = "<group>"; };
+		CAE58F801CBC9AE300956EED /* InstaPhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaPhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		CAE58F821CBC9F3A00956EED /* photoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoCollectionViewCell.swift; sourceTree = "<group>"; };
 		CAE88CE51CB5816000B96FC2 /* CalendarApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarApi.swift; sourceTree = "<group>"; };
 		CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarEvent.swift; path = ../CalendarEvent.swift; sourceTree = "<group>"; };
 		CAE88CEA1CB6084100B96FC2 /* Waffles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Waffles.json; sourceTree = "<group>"; };
@@ -101,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				CAE88CE51CB5816000B96FC2 /* CalendarApi.swift */,
+				CAE58F7C1CBC97D000956EED /* InstagramAPI.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -110,7 +121,9 @@
 			children = (
 				CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */,
 				CAE88CEC1CB6088A00B96FC2 /* Waffle.swift */,
+				CAE58F7E1CBC981A00956EED /* InstaPhoto.swift */,
 				CAE88CEE1CB6102600B96FC2 /* WaffleTableViewCell.swift */,
+				CAE58F821CBC9F3A00956EED /* photoCollectionViewCell.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -118,6 +131,7 @@
 		CAE88CF01CB61A7B00B96FC2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CAE58F521CB84A3300956EED /* CustomAnnotation.swift */,
 				CAE88CEA1CB6084100B96FC2 /* Waffles.json */,
 				CAE58F4C1CB6B97300956EED /* UIColor extension.swift */,
 			);
@@ -141,6 +155,7 @@
 				CAE8A5801CB44C7100B4529F /* WaffleMenuViewController.swift */,
 				CAFA9CFE1CB457C9009A3FA4 /* LocationsViewController.swift */,
 				CAFA9D001CB4581A009A3FA4 /* AboutViewController.swift */,
+				CAE58F801CBC9AE300956EED /* InstaPhotosCollectionViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -225,12 +240,17 @@
 			files = (
 				CAE88CEF1CB6102600B96FC2 /* WaffleTableViewCell.swift in Sources */,
 				CAE8A5811CB44C7100B4529F /* WaffleMenuViewController.swift in Sources */,
+				CAE58F7F1CBC981A00956EED /* InstaPhoto.swift in Sources */,
 				CA7B07D11CB2C9A100A473CF /* AppDelegate.swift in Sources */,
+				CAE58F531CB84A3300956EED /* CustomAnnotation.swift in Sources */,
 				CAE58F4D1CB6B97300956EED /* UIColor extension.swift in Sources */,
+				CAE58F7D1CBC97D000956EED /* InstagramAPI.swift in Sources */,
 				CAE88CE81CB5903100B96FC2 /* CalendarEvent.swift in Sources */,
 				CAE58F4F1CB6CBC100956EED /* Datastore.swift in Sources */,
 				CAFA9D011CB4581A009A3FA4 /* AboutViewController.swift in Sources */,
 				CAE8A5831CB452DF00B4529F /* NaviTableViewController.swift in Sources */,
+				CAE58F831CBC9F3A00956EED /* photoCollectionViewCell.swift in Sources */,
+				CAE58F811CBC9AE300956EED /* InstaPhotosCollectionViewController.swift in Sources */,
 				CAE88CE61CB5816000B96FC2 /* CalendarApi.swift in Sources */,
 				CAE8A57C1CB44B6200B4529F /* SWRevealViewController.m in Sources */,
 				CAFA9CFF1CB457C9009A3FA4 /* LocationsViewController.swift in Sources */,
@@ -348,10 +368,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WaffleLuv/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BronxDupaix.WaffleLuv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WaffleLuv/WaffleLuv-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -362,10 +386,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = WaffleLuv/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = BronxDupaix.WaffleLuv;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "WaffleLuv/WaffleLuv-Bridging-Header.h";
 			};
 			name = Release;
