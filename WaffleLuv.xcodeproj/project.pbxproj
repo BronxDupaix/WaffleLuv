@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E3CAEA31CBEA52500DE8B90 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E3CAEA21CBEA52500DE8B90 /* CalendarEvent.swift */; };
 		CA7B07D11CB2C9A100A473CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA7B07D01CB2C9A100A473CF /* AppDelegate.swift */; };
 		CA7B07D61CB2C9A100A473CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA7B07D41CB2C9A100A473CF /* Main.storyboard */; };
 		CA7B07D81CB2C9A100A473CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA7B07D71CB2C9A100A473CF /* Assets.xcassets */; };
@@ -20,7 +21,6 @@
 		CAE58F831CBC9F3A00956EED /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F821CBC9F3A00956EED /* PhotoCollectionViewCell.swift */; };
 		CAE58F861CBDA1B900956EED /* BuildYourOwnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F851CBDA1B900956EED /* BuildYourOwnTableViewCell.swift */; };
 		CAE88CE61CB5816000B96FC2 /* CalendarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CE51CB5816000B96FC2 /* CalendarAPI.swift */; };
-		CAE88CE81CB5903100B96FC2 /* CalendarEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */; };
 		CAE88CEB1CB6084100B96FC2 /* Waffles.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE88CEA1CB6084100B96FC2 /* Waffles.json */; };
 		CAE88CED1CB6088A00B96FC2 /* Waffle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CEC1CB6088A00B96FC2 /* Waffle.swift */; };
 		CAE88CEF1CB6102600B96FC2 /* WaffleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CEE1CB6102600B96FC2 /* WaffleTableViewCell.swift */; };
@@ -33,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E3CAEA21CBEA52500DE8B90 /* CalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEvent.swift; sourceTree = "<group>"; };
 		CA7B07CD1CB2C9A100A473CF /* WaffleLuv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaffleLuv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA7B07D01CB2C9A100A473CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA7B07D51CB2C9A100A473CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +49,6 @@
 		CAE58F821CBC9F3A00956EED /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		CAE58F851CBDA1B900956EED /* BuildYourOwnTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildYourOwnTableViewCell.swift; sourceTree = "<group>"; };
 		CAE88CE51CB5816000B96FC2 /* CalendarAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarAPI.swift; sourceTree = "<group>"; };
-		CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CalendarEvent.swift; path = ../CalendarEvent.swift; sourceTree = "<group>"; };
 		CAE88CEA1CB6084100B96FC2 /* Waffles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Waffles.json; sourceTree = "<group>"; };
 		CAE88CEC1CB6088A00B96FC2 /* Waffle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Waffle.swift; sourceTree = "<group>"; };
 		CAE88CEE1CB6102600B96FC2 /* WaffleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaffleTableViewCell.swift; sourceTree = "<group>"; };
@@ -132,8 +132,8 @@
 		CAE88CE91CB6026300B96FC2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CAE88CE71CB5903100B96FC2 /* CalendarEvent.swift */,
 				CAE88CEC1CB6088A00B96FC2 /* Waffle.swift */,
+				5E3CAEA21CBEA52500DE8B90 /* CalendarEvent.swift */,
 				CAE58F7E1CBC981A00956EED /* InstaPhoto.swift */,
 			);
 			name = Model;
@@ -256,10 +256,10 @@
 				CAE58F531CB84A3300956EED /* CustomAnnotation.swift in Sources */,
 				CAE58F4D1CB6B97300956EED /* MyColors.swift in Sources */,
 				CAE58F7D1CBC97D000956EED /* InstagramAPI.swift in Sources */,
-				CAE88CE81CB5903100B96FC2 /* CalendarEvent.swift in Sources */,
 				CAE58F4F1CB6CBC100956EED /* Datastore.swift in Sources */,
 				CAFA9D011CB4581A009A3FA4 /* AboutViewController.swift in Sources */,
 				CAE8A5831CB452DF00B4529F /* NaviTableViewController.swift in Sources */,
+				5E3CAEA31CBEA52500DE8B90 /* CalendarEvent.swift in Sources */,
 				CAE58F831CBC9F3A00956EED /* PhotoCollectionViewCell.swift in Sources */,
 				CAE58F811CBC9AE300956EED /* InstaPhotosCollectionViewController.swift in Sources */,
 				CAE88CE61CB5816000B96FC2 /* CalendarAPI.swift in Sources */,
