@@ -9,19 +9,10 @@
 import UIKit
 import MapKit
 import CoreLocation
-
-
-//MARK: - Event Protocol
-
-protocol EventProtocol{
-    
-    func passEvent(eventsArray: [CalendarEvent]) 
-    
-}
+import WebKit
 
 class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKMapViewDelegate {
-    
-    
+
     //MARK: - Variables
     
     var locationManager = CLLocationManager()
@@ -38,19 +29,19 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     var dateFormatter = NSDateFormatter()
     
+    var webView = WKWebView()
+    
     //MARK: - View did functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("Map view did load")
-        
+
         for event in DataStore.sharedInstance.currentEvents {
 
             createMKPins(event)
         }
-        
-       
 
         locationManager.delegate = self
         
@@ -114,8 +105,8 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
             
             let coordinate = l?.coordinate
             
-            print(coordinate?.latitude)
-            print(coordinate?.longitude)
+           // print(coordinate?.latitude)
+           // print(coordinate?.longitude)
             
             
             if let center = coordinate {
@@ -129,9 +120,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
                 currentLocation.coordinate = CLLocationCoordinate2D(latitude: center.latitude, longitude: center.longitude)
                 
                 currentLocation.title = "Your current location"
-                
-              //  self.locationsMap.addAnnotation(currentLocation)
-                
+
                 self.locationsMap.showsUserLocation = true
                 
                 print("mapview updated")
@@ -153,11 +142,30 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         
-        print("Annotation clicked") 
+        if let location = view.annotation!.title {
+    
+        let urlString = "https://www.google.com/maps/place/\(location!)"
+        
+        let safeURL = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+
+        let url = NSURL(string: safeURL!)
+
+        let nsurl = NSURLRequest(URL: url!)
+        
+        self.webView.loadRequest(nsurl)
+        
+        self.webView.backgroundColor = UIColor .redColor()
+        
+        self.view.addSubview(self.webView)
+
+        let frame = CGRectMake(0, 60, self.view.bounds.width, self.view.bounds.height-60)
+
+        webView.frame = frame
+            
+        self.view.bringSubviewToFront(webView)
+
+        }
     }
-    
-    
-       
     
     //MARK: - MKPins function
 
@@ -193,33 +201,33 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         
         gilbert.imageName = "store"
         
-        gilbert.title = "Gilbert AZ Location"
+        gilbert.title = "2743 S Market St #104, Gilbert, AZ 85295"
         
-        gilbert.subtitle = "2743 S Market St #104, Gilbert, AZ 85295"
+        gilbert.subtitle = "Gilbert AZ Location"
         
         midvale.coordinate = CLLocationCoordinate2D(latitude: 40.623698, longitude: -111.860071)
         
         midvale.imageName = "store"
         
-        midvale.title = "Midvale Location"
+        midvale.title =  "1142 Fort Union Blvd #M05, Midvale, UT 84047"
         
-        midvale.subtitle = "1142 Fort Union Blvd #M05, Midvale, UT 84047"
+        midvale.subtitle = "Midvale Location"
 
         provo.coordinate = CLLocationCoordinate2D(latitude: 40.258434, longitude: -111.674773)
         
         provo.imageName = "store"
         
-        provo.title = "Provo Location"
+        provo.title = "1796 N 950 W St, Provo, UT 84604"
         
-        provo.subtitle = "1796 N 950 W St, Provo, UT 84604"
+        provo.subtitle = "Provo Location"
         
         bountiful.coordinate = CLLocationCoordinate2D(latitude: 40.891752, longitude: -111.892615)
         
         bountiful.imageName = "store"
         
-        bountiful.title = "Bountiful Location"
+        bountiful.title =  "255 North 500 West, Bountiful, UT 84010"
         
-        bountiful.subtitle = "255 North 500 West, Bountiful, UT 84010"
+        bountiful.subtitle = "Bountiful Location"
         
         centerMapOnLocation(initialLocation)
         
@@ -230,7 +238,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         locationsMap.addAnnotation(bountiful)
         
         locationsMap.addAnnotation(gilbert)
-        
         
     }
 

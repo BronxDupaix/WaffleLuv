@@ -73,6 +73,8 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        if indexPath.section == 0 {
+        
         let waffle = wafflesArray[indexPath.row]
         
         let cell = tableView.dequeueReusableCellWithIdentifier("waffleCell") as!WaffleTableViewCell
@@ -177,32 +179,83 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         cell.priceLabel.text = waffle.price 
         
         return cell
+            
+        } else {
+            
+            if indexPath.section == 1 {
+                
+                let cell = tableView.dequeueReusableCellWithIdentifier("BuildYourOwnCell") as? BuildYourOwnTableViewCell
+                
+                return cell! 
+                
+                
+            } else {
+                
+                if indexPath.section == 2 {
+                    
+                    
+                    let cell = tableView.dequeueReusableCellWithIdentifier("Drinks")
+                    
+                    return cell! 
+                    
+                }
+            }
+            
+            
+            
+        }
+        
+        let cell = UITableViewCell()
+        
+        return cell 
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
+        
+        if section == 0 {
         return wafflesArray.count
+        } else {
+            return 1
+        }
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
+        if indexPath.section == 0 {
+        
        let waffle = wafflesArray[indexPath.row]
         
         toggleWaffle(waffle)
+            
+        }
+    }
+    
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 3
     }
     
      func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if indexPath.section == 0 {
         
         let waffle = wafflesArray[indexPath.row]
         
         if waffle.isSelected == true {
             
-            return 150
+            return 175
             
         } else {
             
             return 35
         }
+            
+        }
+        
+        return 160
+        
+        
     }
     
     func toggleWaffle(waffle: Waffle) {

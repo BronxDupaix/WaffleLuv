@@ -13,9 +13,7 @@ typealias JSONArray = [JSONDictionary]
 
 class CalendarAPI {
     
-    var delegate: EventProtocol?
-    
-    let calendarIDs = ["37acdbblsoobtn4e8pdiiou0og","7le3v0i298umv73s6utg6mlgns","vedof0bnd56tpg88ts26ri8tfs", "ljtm924o1d2i1rsvcasfifa8v0", "cv3ksjlpccbinsdskl03sje1uk","a4qf72ifpil5ubisui5krs6o6s"]
+    let calendarIDs = ["37acdbblsoobtn4e8pdiiou0og","7le3v0i298umv73s6utg6mlgns","vedof0bnd56tpg88ts26ri8tfs", "ljtm924o1d2i1rsvcasfifa8v0", "cv3ksjlpccbinsdskl03sje1uk","a4qf72ifpil5ubisui5krs6o6s"] 
     
     var events = [CalendarEvent]()
     
@@ -24,20 +22,6 @@ class CalendarAPI {
     var currentDate = NSDate()
     
     var dateFormatter = NSDateFormatter()
-    
-    // for event in events 
-    
-    // if event.start time is >= current date 
-    
-    // and event.endTime is <= current date 
-    
-    // pass event to locations view controller and into a current events array 
-
-
-    
-    // If currentDate time interval  < endDate time interval and current date time interval > startdate interval
-    
-    // If both paramaters are met pass that event into a current events array and display on map
 
     
     func checkForCurrentEvents(item: CalendarEvent)  {
@@ -69,11 +53,12 @@ class CalendarAPI {
                     
                     if item.location != "" {
                     
-                    print(item.location)
+                   // print(item.location)
                     
-                    print(item.startDate)
+                   // print(item.startDate)
                     
-                    print(item.endDate)
+                   //
+                        print(item.endDate)
                     
                     print("item appended")
                         
