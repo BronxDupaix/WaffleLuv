@@ -41,6 +41,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         for event in DataStore.sharedInstance.currentEvents {
 
             createMKPins(event)
+            
         }
 
         locationManager.delegate = self
@@ -108,7 +109,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
            // print(coordinate?.latitude)
            // print(coordinate?.longitude)
             
-            
             if let center = coordinate {
                 
                let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7))
@@ -143,27 +143,13 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         
         if let location = view.annotation!.title {
-    
-        let urlString = "https://www.google.com/maps/place/\(location!)"
-        
-        let safeURL = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-
-        let url = NSURL(string: safeURL!)
-
-        let nsurl = NSURLRequest(URL: url!)
-        
-        self.webView.loadRequest(nsurl)
-        
-        self.webView.backgroundColor = UIColor .redColor()
-        
-        self.view.addSubview(self.webView)
-
-        let frame = CGRectMake(0, 60, self.view.bounds.width, self.view.bounds.height-60)
-
-        webView.frame = frame
             
-        self.view.bringSubviewToFront(webView)
-
+            if let time = view.annotation!.subtitle {
+                
+                self.directionsToLocation(location!, time: time!)
+            }
+            
+            
         }
     }
     
@@ -284,5 +270,52 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         annotationView!.image = UIImage(named:cpa!.imageName)
         
         return annotationView
+    }
+    
+    //MARK: - Directions Alert View
+    
+    func directionsToLocation(location: String, time: String ) {
+        
+        print("Annotation Tapped")
+
+        let alertController = UIAlertController(title: "\(location) (\(time))", message: "Take Me To This Location", preferredStyle: .Alert)
+
+        let directionsAction = UIAlertAction(title: "Directions", style: .Default) { (alertAction) -> Void in
+            
+            print("Directions Pressed")
+            
+            let urlString = "https://www.google.com/maps/place/\(location)"
+            
+            let safeURL = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
+            
+            let url = NSURL(string: safeURL!)
+            
+            let nsurl = NSURLRequest(URL: url!)
+            
+            self.webView.loadRequest(nsurl)
+            
+            self.webView.backgroundColor = UIColor .redColor()
+            
+            self.view.addSubview(self.webView)
+            
+            let frame = CGRectMake(0, 60, self.view.bounds.width, self.view.bounds.height-60)
+            
+            self.webView.frame = frame
+            
+            self.view.bringSubviewToFront(self.webView)
+
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { (alertAction) -> Void in
+            
+            print("CancelledPressed")
+        }
+
+        alertController.addAction(directionsAction)
+        
+        alertController.addAction(cancelAction)
+
+        self.presentViewController(alertController, animated: true, completion:nil)
+  
     }
 }

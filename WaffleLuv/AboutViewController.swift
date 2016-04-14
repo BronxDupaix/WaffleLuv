@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var navButton: UIBarButtonItem!
     
@@ -23,6 +23,77 @@ class AboutViewController: UIViewController {
 
 
     }
-
+    
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        if indexPath.section == 0 {
+        
+        let firstCell = tableView.dequeueReusableCellWithIdentifier("FirstCell")
+        
+        return firstCell!
+        }
+        
+        if indexPath.section == 1 {
+            
+            
+            let secondCell = tableView.dequeueReusableCellWithIdentifier("SecondCell")
+            
+            return secondCell!
+        }
+        
+        if indexPath.section == 2 {
+            
+            let thirdCell = tableView.dequeueReusableCellWithIdentifier("ThirdCell")
+            
+            return thirdCell! 
+        }
+        
+        if indexPath.section == 3 {
+            
+            
+            let fourthCell = tableView.dequeueReusableCellWithIdentifier("FourthCell")
+            
+            return fourthCell!
+        }
+        return cell 
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 4
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        
+        if indexPath.section == 0 {
+            
+            return 520
+        }
+        
+        if indexPath.section == 1 {
+            
+            
+            return 435
+        }
+        
+        if indexPath.section == 2 {
+            
+            return 385
+            
+        }
+        
+        if indexPath.section == 3 {
+            
+            return 500
+        }
+        
+        return 30 
+    }
 
 }

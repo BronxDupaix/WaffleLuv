@@ -151,6 +151,11 @@ class CalendarAPI {
         
     }
     
+    func fetchSaltLakeTruck1() {
+        
+        
+        
+    }
     
     
 }

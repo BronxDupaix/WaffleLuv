@@ -11,9 +11,11 @@ import UIKit
 class NaviTableViewController: UITableViewController {
     
     
+    @IBOutlet weak var waffleLoveImage: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
   
@@ -21,12 +23,12 @@ class NaviTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
+
         return 5
     }
 

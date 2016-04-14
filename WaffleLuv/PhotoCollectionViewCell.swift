@@ -8,9 +8,14 @@
 
 import UIKit
 
+import QuartzCore
+
 class photoCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var photo: UIImageView!
+    
+    @IBOutlet weak var imageBackground: UIView!
+    
     
     func loadImageFromURL(urlString: String) {
         

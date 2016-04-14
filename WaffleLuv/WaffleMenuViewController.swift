@@ -28,8 +28,17 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         
         calendarApi.fetchCalendar()
         
-        instaApi.fetchInstaPhotos() 
+        instaApi.fetchInstaPhotos()
         
+        if Reachability.isConnectedToNetwork() == true {
+            print("Internet connection OK")
+        } else {
+            
+            print("Internet connection FAILED")
+            let alert = UIAlertView(title: "No Internet Connection", message: "Please connect your device to the internet", delegate: nil, cancelButtonTitle: "OK")
+            alert.show()
+        }
+
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -79,7 +88,7 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         
         let cell = tableView.dequeueReusableCellWithIdentifier("waffleCell") as!WaffleTableViewCell
         
-        if waffle.name == "Daily Special" {
+        if waffle.name == "$5 Daily Special" {
             
             cell.nameLabel.textColor = UIColor.whiteColor()
         }
@@ -111,6 +120,8 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             cell.nameLabel.textColor = color
             
             cell.wafflePhoto.image = UIImage(named: "RedWonder")
+            
+           // waffle.isSelected = true
         }
         
         if waffle.name == "The Works" {
@@ -287,6 +298,11 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
 
+    @IBAction func menuButtonTapped(sender: UIBarButtonItem) {
+        
+        menuButton.target = self.revealViewController()
+        menuButton.action = "revealToggle:"
+    }
  
 
 } // End of View Controller

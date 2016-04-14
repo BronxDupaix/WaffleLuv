@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import QuartzCore
 
 private let reuseIdentifier = "Cell"
 
 class InstaPhotosCollectionViewController: UICollectionViewController {
+    
+
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -25,6 +28,7 @@ class InstaPhotosCollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
         
+
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -63,7 +67,11 @@ class InstaPhotosCollectionViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photoCell", forIndexPath: indexPath) as? photoCollectionViewCell
         
+        cell!.imageBackground.layer.cornerRadius = 15
+        
         cell?.photo.image = nil
+        
+        cell?.photo.layer.cornerRadius = 4 
         
         cell!.loadImageFromURL(photo.url)
         
