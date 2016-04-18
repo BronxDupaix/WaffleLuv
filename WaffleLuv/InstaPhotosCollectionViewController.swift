@@ -59,7 +59,7 @@ class InstaPhotosCollectionViewController: UICollectionViewController {
 
         cell?.photo.image = nil
         
-        cell?.photo.layer.cornerRadius = 25
+        cell?.photo.layer.cornerRadius = 20
         
         cell!.photo.image = photo.image 
         

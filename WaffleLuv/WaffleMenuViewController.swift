@@ -113,7 +113,7 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             
             cell.wafflePhoto.image = UIImage(named: "RedWonder")
             
-           // waffle.isSelected = true
+            waffle.isSelected = true
         }
         
         if waffle.name == "The Works" {

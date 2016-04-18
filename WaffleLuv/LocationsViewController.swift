@@ -41,6 +41,14 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         centerInitialLocation(initialLocation)
         
         calApi.fetchCalendar()
+        
+        if DataStore.sharedInstance.currentEvents.count == 0 {
+            
+            
+            print("No Trucks available")
+            let alert = UIAlertView(title: "There are currently no trucks available", message: "Our Store hours are Monday-Thursday: 8:00 AM ~ 10:00 PM, Friday-Saturday: 8:00 AM ~ 11:00 PM", delegate: nil, cancelButtonTitle: "OK")
+            alert.show()
+        }
  
         print("Map view did load")
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LocationsViewController.updateMap), name: kNotificationEventGeocode, object: nil)

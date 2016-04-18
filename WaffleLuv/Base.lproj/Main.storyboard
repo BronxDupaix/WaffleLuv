@@ -562,26 +562,52 @@
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MILK. WATER. APPLE JUICE .93ea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZT-5m-EUW">
-                                                    <rect key="frame" x="8" y="36" width="179" height="14"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="0.9911176152451332" green="0.56995708110271182" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOTTLED SODA                       $1.39" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="env-0K-HRe">
-                                                    <rect key="frame" x="8" y="54" width="187" height="13.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHOCOLATE MILK       $1.39" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tMv-vb-d2e">
+                                                    <rect key="frame" x="441" y="36" width="149" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.99111761519999997" green="0.56995708109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARAMEL APPLE CIDER $2.55" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iM8-z9-ten">
+                                                    <rect key="frame" x="430" y="54" width="160" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.99111761519999997" green="0.56995708109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DRINKING CHOCOLATE $2.55" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkP-OQ-znV">
+                                                    <rect key="frame" x="432" y="72" width="158" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.99111761519999997" green="0.56995708109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BOTTLED SODA                     $1.39" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="env-0K-HRe">
+                                                    <rect key="frame" x="8" y="54" width="405" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.99111761519999997" green="0.56995708109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MILK. WATER. APPLE JUICE .93ea" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZT-5m-EUW">
+                                                    <rect key="frame" x="8" y="36" width="420" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.9911176152451332" green="0.56995708110271182" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="tMv-vb-d2e" firstAttribute="top" secondItem="qdX-LS-sXv" secondAttribute="topMargin" constant="28" id="4ku-5s-fdY"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iM8-z9-ten" secondAttribute="trailing" constant="2" id="CGN-T4-UFM"/>
                                                 <constraint firstItem="pOK-Ie-xns" firstAttribute="top" secondItem="qdX-LS-sXv" secondAttribute="topMargin" constant="4" id="EoX-M5-jsq"/>
                                                 <constraint firstItem="wZT-5m-EUW" firstAttribute="leading" secondItem="qdX-LS-sXv" secondAttribute="leading" constant="8" id="Hmc-Yz-b1P"/>
+                                                <constraint firstItem="iM8-z9-ten" firstAttribute="top" secondItem="tMv-vb-d2e" secondAttribute="bottom" constant="4" id="Oel-vE-hla"/>
                                                 <constraint firstItem="wZT-5m-EUW" firstAttribute="top" secondItem="qdX-LS-sXv" secondAttribute="topMargin" constant="28" id="PdY-Ot-12c"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pkP-OQ-znV" secondAttribute="trailing" constant="2" id="bKa-bv-Sk4"/>
+                                                <constraint firstAttribute="trailing" secondItem="tMv-vb-d2e" secondAttribute="trailing" constant="10" id="bYD-O1-ndZ"/>
+                                                <constraint firstItem="tMv-vb-d2e" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wZT-5m-EUW" secondAttribute="trailing" constant="8" id="cN1-h4-WpT"/>
                                                 <constraint firstItem="env-0K-HRe" firstAttribute="top" secondItem="wZT-5m-EUW" secondAttribute="bottom" constant="4" id="d0j-2v-icR"/>
                                                 <constraint firstItem="pOK-Ie-xns" firstAttribute="centerX" secondItem="qdX-LS-sXv" secondAttribute="centerX" id="hnN-J5-jiF"/>
+                                                <constraint firstItem="pkP-OQ-znV" firstAttribute="top" secondItem="iM8-z9-ten" secondAttribute="bottom" constant="4" id="pQy-Oz-D8K"/>
+                                                <constraint firstItem="iM8-z9-ten" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="env-0K-HRe" secondAttribute="trailing" constant="15" id="rrw-v2-EDu"/>
                                                 <constraint firstItem="pOK-Ie-xns" firstAttribute="width" secondItem="qdX-LS-sXv" secondAttribute="width" multiplier="0.9" id="xTz-5g-SFu"/>
                                                 <constraint firstItem="env-0K-HRe" firstAttribute="leading" secondItem="qdX-LS-sXv" secondAttribute="leading" constant="8" id="yyg-NM-Ukf"/>
                                             </constraints>
@@ -884,7 +910,7 @@ This Instagram post from November 2013 posted by Melissa Terry describes pretty 
                                                 <constraint firstItem="byo-i8-POy" firstAttribute="width" secondItem="TJv-pY-NSG" secondAttribute="width" multiplier="0.9" id="5vF-Ru-RHn"/>
                                                 <constraint firstItem="Xcw-bX-1vR" firstAttribute="centerX" secondItem="TJv-pY-NSG" secondAttribute="centerX" id="Xec-hb-275"/>
                                                 <constraint firstItem="Xcw-bX-1vR" firstAttribute="top" secondItem="TJv-pY-NSG" secondAttribute="topMargin" constant="5" id="gZ9-IX-EC4"/>
-                                                <constraint firstItem="Xcw-bX-1vR" firstAttribute="height" secondItem="TJv-pY-NSG" secondAttribute="height" multiplier="0.5" id="nbW-AC-feV"/>
+                                                <constraint firstItem="Xcw-bX-1vR" firstAttribute="height" secondItem="TJv-pY-NSG" secondAttribute="height" multiplier="0.4" id="nbW-AC-feV"/>
                                                 <constraint firstItem="Xcw-bX-1vR" firstAttribute="width" secondItem="TJv-pY-NSG" secondAttribute="width" multiplier="0.8" id="rmO-LP-O9m"/>
                                                 <constraint firstItem="byo-i8-POy" firstAttribute="centerX" secondItem="TJv-pY-NSG" secondAttribute="centerX" id="xt5-2I-kih"/>
                                             </constraints>
@@ -1021,6 +1047,6 @@ Three years after starting out, we continue to operate on principals of faith, h
         <image name="whiteBanner2" width="300" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Oan-b5-4yz"/>
+        <segue reference="Lxn-dD-xKV"/>
     </inferredMetricsTieBreakers>
 </document>
