@@ -14,22 +14,14 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var waffleMenu: UITableView!
-    
-    var calendarApi = CalendarAPI()
-    
-    var instaApi = Instagram()
-    
+
     var wafflesArray = [Waffle]()
 
     //MARK: - View Did load 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        calendarApi.fetchCalendar()
-        
-        instaApi.fetchInstaPhotos()
-        
+
         if Reachability.isConnectedToNetwork() == true {
             print("Internet connection OK")
         } else {
@@ -195,7 +187,7 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             
             if indexPath.section == 1 {
                 
-                let cell = tableView.dequeueReusableCellWithIdentifier("BuildYourOwnCell") as? BuildYourOwnTableViewCell
+                let cell = tableView.dequeueReusableCellWithIdentifier("BuildYourOwnCell") 
                 
                 return cell! 
                 
@@ -233,8 +225,14 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        if indexPath.section == 0 {
+//        for w in wafflesArray{
+//            
+//            w.isSelected = false
+//        }
+
         
+        if indexPath.section == 0 {
+            
        let waffle = wafflesArray[indexPath.row]
         
         toggleWaffle(waffle)
@@ -265,8 +263,6 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         return 160
-        
-        
     }
     
     func toggleWaffle(waffle: Waffle) {

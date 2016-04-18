@@ -11,6 +11,8 @@ import MapKit
 import CoreLocation
 import WebKit
 
+let kNotificationEventGeocode = "geocodeEvent"
+
 class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKMapViewDelegate {
 
     //MARK: - Variables
@@ -23,26 +25,27 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     let initialLocation = CLLocation(latitude: 40.760779, longitude: -111.891047) 
     
-    let regionRadius: CLLocationDistance = 700000
-    
-    var currentEvents = [CalendarEvent]()
-    
+    let regionRadius: CLLocationDistance = 800000
+
     var dateFormatter = NSDateFormatter()
     
     var webView = WKWebView()
+    
+    var calApi = CalendarAPI()
     
     //MARK: - View did functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        centerInitialLocation(initialLocation)
+        
+        calApi.fetchCalendar()
+ 
         print("Map view did load")
-
-        for event in DataStore.sharedInstance.currentEvents {
-
-            createMKPins(event)
-            
-        }
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LocationsViewController.updateMap), name: kNotificationEventGeocode, object: nil)
+        
+        createStorePins()
 
         locationManager.delegate = self
         
@@ -66,15 +69,37 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         locationManager.requestLocation()
         
         locationsMap.showsUserLocation = true
+        
+
+    }
+    
+    
+    func updateMap(location: CLLocation) {
+        
+        for event in DataStore.sharedInstance.currentEvents {
+            
+            createMKPins(event)
+            
+            locationsMap.setCenterCoordinate(locationsMap.region.center, animated: false)
+            
+        }
+
+        
+        
     }
     
     
     //MARK: - Locations Manager functions and Center map
     
-    
     func centerMapOnLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-        regionRadius * 1.0, regionRadius * 1.0)
+        regionRadius * 0.08, regionRadius * 0.08)
+        locationsMap.setRegion(coordinateRegion, animated: true)
+    }
+    
+    func centerInitialLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius * 2.5, regionRadius * 2.5) 
         locationsMap.setRegion(coordinateRegion, animated: true)
     }
     
@@ -99,16 +124,15 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     }
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
+
         if locations.count > 0 {
             
-            let l = locations.first
+            let location = locations.first
             
-            let coordinate = l?.coordinate
+            self.updateMap(location!)
             
-           // print(coordinate?.latitude)
-           // print(coordinate?.longitude)
-            
+            let coordinate = location?.coordinate 
+
             if let center = coordinate {
                 
                let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.7, longitudeDelta: 0.7))
@@ -122,6 +146,8 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
                 currentLocation.title = "Your current location"
 
                 self.locationsMap.showsUserLocation = true
+                
+                self.centerMapOnLocation(location!)
                 
                 print("mapview updated")
                 
@@ -174,6 +200,12 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         truck.subtitle = "\(start) - \(end)"
         
         locationsMap.addAnnotation(truck)
+
+
+        
+    }
+    
+    func createStorePins() {
         
         let midvale = CustomPointAnnotation()
         
@@ -181,7 +213,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         
         let bountiful = CustomPointAnnotation()
         
-        let gilbert = CustomPointAnnotation() 
+        let gilbert = CustomPointAnnotation()
         
         gilbert.coordinate = CLLocationCoordinate2D(latitude: 33.300539, longitude: -111.743183)
         
@@ -198,7 +230,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         midvale.title =  "1142 Fort Union Blvd #M05, Midvale, UT 84047"
         
         midvale.subtitle = "Midvale Location"
-
+        
         provo.coordinate = CLLocationCoordinate2D(latitude: 40.258434, longitude: -111.674773)
         
         provo.imageName = "store"
@@ -215,8 +247,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         
         bountiful.subtitle = "Bountiful Location"
         
-        centerMapOnLocation(initialLocation)
-        
         locationsMap.addAnnotation(midvale)
         
         locationsMap.addAnnotation(provo)
@@ -224,6 +254,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         locationsMap.addAnnotation(bountiful)
         
         locationsMap.addAnnotation(gilbert)
+        
         
     }
 

@@ -12,22 +12,23 @@ import QuartzCore
 private let reuseIdentifier = "Cell"
 
 class InstaPhotosCollectionViewController: UICollectionViewController {
-    
-
 
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+    var instaApi = Instagram()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       // self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
 
-        // Register cell classes
-        self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
         
+        if DataStore.sharedInstance.instaPhotos.count <= 19 {
+            
+            instaApi.fetchInstaPhotos()
+            
+            print("Photos fetched") 
+        } 
 
         
         if self.revealViewController() != nil {
@@ -37,27 +38,16 @@ class InstaPhotosCollectionViewController: UICollectionViewController {
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        
+
         return 1
     }
 
 
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
+
         return DataStore.sharedInstance.instaPhotos.count
     }
 
@@ -66,15 +56,12 @@ class InstaPhotosCollectionViewController: UICollectionViewController {
         let photo = DataStore.sharedInstance.instaPhotos[indexPath.row]
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("photoCell", forIndexPath: indexPath) as? photoCollectionViewCell
-        
-        cell!.imageBackground.layer.cornerRadius = 15
-        
+
         cell?.photo.image = nil
         
-        cell?.photo.layer.cornerRadius = 4 
+        cell?.photo.layer.cornerRadius = 25
         
-        cell!.loadImageFromURL(photo.url)
-        
+        cell!.photo.image = photo.image 
         
         return cell!
     }
@@ -83,7 +70,7 @@ class InstaPhotosCollectionViewController: UICollectionViewController {
     
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let size = self.view.frame.size
-        return CGSizeMake(size.width / 2.05, size.width / 2.05)
+        return CGSizeMake(size.width / 2.02, size.width / 2.02)
     }
     
     
@@ -97,7 +84,7 @@ class InstaPhotosCollectionViewController: UICollectionViewController {
     func collectionView(collectionView: UICollectionView, layout
         collectionViewLayout: UICollectionViewLayout,
         minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 10
+        return 3
     }
 
 

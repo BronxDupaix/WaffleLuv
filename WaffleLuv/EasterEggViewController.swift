@@ -37,10 +37,7 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
     let itemBehavior = UIDynamicItemBehavior()
     
     let imageView = UIView()
-    
-    
-    
-    
+
     // For getting device motion updates
     let motionQueue = NSOperationQueue.mainQueue()
     
@@ -83,24 +80,17 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
     
     //MARK: - Add and generate boxes
     
-    func addBox(location: CGRect, color: UIColor) -> UIView {
+    func addBox(location: CGRect) -> UIView {
         
         // Creates new box and appends new box into box array
         
         let newBox = UIView(frame: location)
-        
-        print("Random frames Generated")
-        
-        newBox.backgroundColor = color
-        
-        print("Random Color generated")
-        
+
+        newBox.backgroundColor = UIColor.darkGrayColor()
+
         view.addSubview(newBox)
         
         addBoxToBehaviors(newBox)
-        
-        boxes.append(newBox)
-        
         
         newBox.layer.masksToBounds = true
         
@@ -120,10 +110,10 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
         
         newBox.addSubview(imageView)
         
+        boxes.append(newBox)
+        
         return newBox
-        
-        
-        print("create new box")
+  
     }
     
     func generateBoxes() {
@@ -132,44 +122,20 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
         for box in 0...60 {
             
             let frame = randomFrame()
-            
-            let color = randomColor()
-            
-            let newBox = addBox(frame, color: color)
+
+            let newBox = addBox(frame)
             
         }
 
         print("boxes generated")
     }
     
-    
-    //MARK: - Creates random color and starting point for Boxes
-    func randomColor() -> UIColor {
-        
-        // Generates the random color for each box
-        
-        
-        
-        let red : CGFloat = CGFloat(arc4random() % 256) / 256
-        
-        let green : CGFloat = CGFloat(arc4random() % 256) / 256
-        
-        let blue : CGFloat = CGFloat(arc4random() % 256) / 256
-        
-        
-        return UIColor(red: red, green: green, blue: blue, alpha: 1);
-    }
-    
-    
-    
     func randomFrame() -> CGRect {
         
         var guess = CGRectMake(9, 9, 9, 9)
         
         repeat {
-            
-            
-            
+
             // Generates random location for box to appear
             
             let guessX = CGFloat(arc4random()) % maxX
@@ -234,16 +200,9 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
         
         itemBehavior.friction = 0.2
         itemBehavior.elasticity = 0.8
-        
-        
+
         animator?.addBehavior(itemBehavior)
     }
-    
-    func collisionBehavior(behavior: UICollisionBehavior, endedContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem) {
-
-    }
-    
-    
     
     func addBoxToBehaviors(box: UIView) {
         // gives each new box gravity and collision behaviors

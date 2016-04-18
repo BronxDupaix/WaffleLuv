@@ -73,24 +73,24 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if indexPath.section == 0 {
             
-            return 520
+            return 580
         }
         
         if indexPath.section == 1 {
             
             
-            return 435
+            return 505
         }
         
         if indexPath.section == 2 {
             
-            return 385
+            return 440
             
         }
         
         if indexPath.section == 3 {
             
-            return 500
+            return 605
         }
         
         return 30 

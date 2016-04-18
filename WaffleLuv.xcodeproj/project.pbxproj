@@ -19,7 +19,6 @@
 		CAE58F7F1CBC981A00956EED /* InstaPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F7E1CBC981A00956EED /* InstaPhoto.swift */; };
 		CAE58F811CBC9AE300956EED /* InstaPhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F801CBC9AE300956EED /* InstaPhotosCollectionViewController.swift */; };
 		CAE58F831CBC9F3A00956EED /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F821CBC9F3A00956EED /* PhotoCollectionViewCell.swift */; };
-		CAE58F861CBDA1B900956EED /* BuildYourOwnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE58F851CBDA1B900956EED /* BuildYourOwnTableViewCell.swift */; };
 		CAE58F881CBEA9D000956EED /* ThirstyScriptRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CAE58F871CBEA9D000956EED /* ThirstyScriptRegular.otf */; };
 		CAE88CE61CB5816000B96FC2 /* CalendarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAE88CE51CB5816000B96FC2 /* CalendarAPI.swift */; };
 		CAE88CEB1CB6084100B96FC2 /* Waffles.json in Resources */ = {isa = PBXBuildFile; fileRef = CAE88CEA1CB6084100B96FC2 /* Waffles.json */; };
@@ -50,7 +49,6 @@
 		CAE58F7E1CBC981A00956EED /* InstaPhoto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaPhoto.swift; sourceTree = "<group>"; };
 		CAE58F801CBC9AE300956EED /* InstaPhotosCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstaPhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		CAE58F821CBC9F3A00956EED /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
-		CAE58F851CBDA1B900956EED /* BuildYourOwnTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuildYourOwnTableViewCell.swift; sourceTree = "<group>"; };
 		CAE58F871CBEA9D000956EED /* ThirstyScriptRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstyScriptRegular.otf; sourceTree = "<group>"; };
 		CAE88CE51CB5816000B96FC2 /* CalendarAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarAPI.swift; sourceTree = "<group>"; };
 		CAE88CEA1CB6084100B96FC2 /* Waffles.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Waffles.json; sourceTree = "<group>"; };
@@ -120,7 +118,6 @@
 			children = (
 				CAE88CEE1CB6102600B96FC2 /* WaffleTableViewCell.swift */,
 				CAE58F821CBC9F3A00956EED /* PhotoCollectionViewCell.swift */,
-				CAE58F851CBDA1B900956EED /* BuildYourOwnTableViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -275,7 +272,6 @@
 				CAE58F831CBC9F3A00956EED /* PhotoCollectionViewCell.swift in Sources */,
 				CAE58F811CBC9AE300956EED /* InstaPhotosCollectionViewController.swift in Sources */,
 				CAE88CE61CB5816000B96FC2 /* CalendarAPI.swift in Sources */,
-				CAE58F861CBDA1B900956EED /* BuildYourOwnTableViewCell.swift in Sources */,
 				CAE8A57C1CB44B6200B4529F /* SWRevealViewController.m in Sources */,
 				CAFA9CFF1CB457C9009A3FA4 /* LocationsViewController.swift in Sources */,
 				CAE88CED1CB6088A00B96FC2 /* Waffle.swift in Sources */,

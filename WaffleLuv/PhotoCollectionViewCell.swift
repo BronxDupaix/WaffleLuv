@@ -24,6 +24,7 @@ class photoCollectionViewCell: UICollectionViewCell {
             dispatch_async(dispatch_get_main_queue(), {
                 if let url = NSURL(string: urlString) {
                     if let data = NSData(contentsOfURL: url) {
+                        
                         self.photo.image = UIImage(data: data)
                     }
                 }

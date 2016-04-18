@@ -25,39 +25,25 @@ class CalendarAPI {
 
     
     func checkForCurrentEvents(item: CalendarEvent)  {
-       // print("Number of items in array \(events.count)")
-        
+ 
             let endTime = item.endDate
             
             let end = endTime.timeIntervalSince1970
-            
-           // print("End time=\(end)")
-            
+
             let today = currentDate.timeIntervalSince1970
-            
-           // print("Todays time\(today)")
-            
+        
             let startTime = item.startDate
             
             let start = startTime.timeIntervalSince1970
             
-           // print("Start time =\(start)")
-            
+
             if start <= today {
-                
-             //   print("Start time checked")
-                
+
                 if end >= today {
-                    
-                  //  filteredArray.append(item)
-                    
+
                     if item.location != "" {
                     
-                   // print(item.location)
-                    
-                   // print(item.startDate)
-                    
-                   //
+
                         print(item.endDate)
                     
                     print("item appended")
@@ -74,9 +60,6 @@ class CalendarAPI {
                 
             }
             
-            
-        
-
     }
     
     
@@ -100,17 +83,12 @@ class CalendarAPI {
                 if error != nil {
                     debugPrint("an error occured \(error)")
                 }else {
-                    
-                    
-                    //  print(data)
-                    
+
                     if let data = data {
                         
                         do {
                             
                             if let dictionary = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? JSONDictionary {
-                                
-                                // print(dictionary)
                                 
                                 if let items = dictionary["items"] as? JSONArray {
                                     
@@ -148,12 +126,6 @@ class CalendarAPI {
         }
             
         }
-        
-    }
-    
-    func fetchSaltLakeTruck1() {
-        
-        
         
     }
     

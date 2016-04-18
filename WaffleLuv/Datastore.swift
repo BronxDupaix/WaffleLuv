@@ -19,6 +19,8 @@ class DataStore: NSObject {
     var currentEvents = [CalendarEvent]()
     
     var instaPhotos = [InstaPhoto]()
+
+    //MARK: - Events Functions
     
     func numberOFEvents() {
         
@@ -35,18 +37,16 @@ class DataStore: NSObject {
                 
                 (latitude: Double, longitude: Double) in
                 
-                // print(latitude)
-                
                 let lat: Double = latitude
                 
                 event.latitiude = lat
-                
-                // print(longitude)
-                
+
                 let long: Double = longitude
                 
                 event.longitude = long
                 
+                NSNotificationCenter.defaultCenter().postNotificationName(kNotificationEventGeocode, object: nil) 
+                print(event.location) 
             }
         }
     }
