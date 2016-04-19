@@ -7,9 +7,7 @@
 //
 
 import UIKit
-
 import QuartzCore
-
 import CoreMotion
 
 class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
@@ -55,7 +53,7 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 
@@ -119,11 +117,11 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
     func generateBoxes() {
         // generates new boxes and gives them properties
         
-        for box in 0...60 {
+        for _ in 0...60 {
             
             let frame = randomFrame()
 
-            let newBox = addBox(frame)
+            _ = addBox(frame)
             
         }
 

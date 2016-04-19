@@ -91,8 +91,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Menu Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOU-F5-VDe">
-                                                    <rect key="frame" x="30" y="11" width="116" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOU-F5-VDe">
+                                                    <rect key="frame" x="30" y="11" width="87" height="21"/>
                                                     <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="17"/>
                                                     <color key="textColor" red="0.16520309406390399" green="1" blue="0.57579053348500098" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -116,8 +116,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-Q0-P2R">
-                                                    <rect key="frame" x="30" y="11" width="74" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-Q0-P2R">
+                                                    <rect key="frame" x="30" y="11" width="69.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.95901442307692308" blue="0.95901442307692308" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -141,8 +141,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Our Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-XZ-BgO">
-                                                    <rect key="frame" x="30" y="11" width="73.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-XZ-BgO">
+                                                    <rect key="frame" x="30" y="11" width="71.5" height="21"/>
                                                     <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="17"/>
                                                     <color key="textColor" red="0.98866483276690054" green="0.99266826923076923" blue="0.051121510984195387" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -166,8 +166,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instagram Feed " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-BS-uV8">
-                                                    <rect key="frame" x="30" y="11" width="124" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram Feed " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-BS-uV8">
+                                                    <rect key="frame" x="30" y="11" width="119" height="21"/>
                                                     <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="17"/>
                                                     <color key="textColor" red="0.93916218691825393" green="0.40514360073193534" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -585,14 +585,14 @@
                                                     <color key="textColor" red="0.99111761519999997" green="0.56995708109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="BOTTLED SODA                     $1.39" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="env-0K-HRe">
-                                                    <rect key="frame" x="8" y="54" width="405" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.89999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOTTLED SODA                     $1.39" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="env-0K-HRe">
+                                                    <rect key="frame" x="8" y="54" width="180.5" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.99111761519999997" green="0.56995708109999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MILK. WATER. APPLE JUICE .93ea" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZT-5m-EUW">
-                                                    <rect key="frame" x="8" y="36" width="420" height="14"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MILK. WATER. APPLE JUICE .93ea" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZT-5m-EUW">
+                                                    <rect key="frame" x="8" y="36" width="179" height="14"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" red="0.9911176152451332" green="0.56995708110271182" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -854,11 +854,11 @@ This Instagram post from November 2013 posted by Melissa Terry describes pretty 
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97V-fy-Rz3">
-                                                    <rect key="frame" x="60" y="13" width="480" height="155"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97V-fy-Rz3">
+                                                    <rect key="frame" x="60" y="13" width="480" height="18"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AdamTerryAndKids" translatesAutoresizingMaskIntoConstraints="NO" id="808-LD-H5k">
-                                                            <rect key="frame" x="0.0" y="0.0" width="480" height="155"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AdamTerryAndKids" translatesAutoresizingMaskIntoConstraints="NO" id="808-LD-H5k">
+                                                            <rect key="frame" x="0.0" y="0.0" width="480" height="18"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -869,8 +869,8 @@ This Instagram post from November 2013 posted by Melissa Terry describes pretty 
                                                         <constraint firstItem="808-LD-H5k" firstAttribute="centerY" secondItem="97V-fy-Rz3" secondAttribute="centerY" id="h9N-4F-Ukx"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTe-iH-THl">
-                                                    <rect key="frame" x="30" y="173" width="540" height="118.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTe-iH-THl">
+                                                    <rect key="frame" x="30" y="36" width="540" height="155.5"/>
                                                     <mutableString key="text">"Adam had always wanted to own his own restaurant, &amp; I always discouraged the idea. It seemed like there was too much to lose. But when a local restaurant went up for sale, and Adam said he'd like to make an offer on it, all my reasons to be scared were gone. So I smiled &amp; said, 'Okay.' He pitched the owner his best proposal, and the man selling the restaurant pretty much laughed him to scorn. (And really, we can't blame him.) After laying out the plan of how he was going to resurrect that business, he realized that was exactly what he was going to do, but for himself instead of someone else. So he got to work. He turned an old insurance office into a kitchen, and a $1,300 vintage step van into a food truck. With the help of our families, we painted, and plumbed and perfected recipes and set a date to open to the public. </mutableString>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -896,11 +896,11 @@ This Instagram post from November 2013 posted by Melissa Terry describes pretty 
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="WaffleLovePaint" translatesAutoresizingMaskIntoConstraints="NO" id="Xcw-bX-1vR">
-                                                    <rect key="frame" x="60" y="13" width="480" height="116.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WaffleLovePaint" translatesAutoresizingMaskIntoConstraints="NO" id="Xcw-bX-1vR">
+                                                    <rect key="frame" x="60" y="13" width="480" height="0.0"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byo-i8-POy">
-                                                    <rect key="frame" x="30" y="134.5" width="540" height="92"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="byo-i8-POy">
+                                                    <rect key="frame" x="30" y="18" width="540" height="109"/>
                                                     <string key="text">"We were exhausted, and had given it EVERYTHING, but at the end of the day, we just had to hope that people would come. ...and this is where I get emotional.
 
 "You came. You came in 100 degree weather. You came when it was six below. You came and took pictures, and told your friends to come. You offered your driveways to us, and some of you even wrote to The City Councils for us. When our transmission broke down, when our engine was blown, when we were stuck in the snow, you helped us. </string>

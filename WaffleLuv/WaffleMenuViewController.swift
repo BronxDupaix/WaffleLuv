@@ -57,11 +57,11 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        let (jsonString, data) = loadJSONFile("Waffles", fileType: "json")
+        let (_, data) = loadJSONFile("Waffles", fileType: "json")
         
        // print(jsonString)
         
@@ -321,7 +321,7 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBAction func menuButtonTapped(sender: UIBarButtonItem) {
         
         menuButton.target = self.revealViewController()
-        menuButton.action = "revealToggle:"
+        menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
     }
  
 
