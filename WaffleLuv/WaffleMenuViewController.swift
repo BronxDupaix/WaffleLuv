@@ -16,21 +16,45 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var waffleMenu: UITableView!
 
     var wafflesArray = [Waffle]()
+    
+    var calApi = CalendarAPI()
 
     //MARK: - View Did load 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        if Reachability.isConnectedToNetwork() == true {
-            print("Internet connection OK")
-        } else {
-            
-            print("Internet connection FAILED")
-            let alert = UIAlertView(title: "No Internet Connection", message: "Please connect your device to the internet", delegate: nil, cancelButtonTitle: "OK")
-            alert.show()
-        }
-
+        
+        calApi.fetchCalendar()
+        
+//        let reachability: Reachability
+//        do {
+//            reachability = try Reachability.reachabilityForInternetConnection()
+//        } catch {
+//            print("Unable to create Reachability")
+//            return
+//        }
+//        
+//        reachability.whenUnreachable = { reachability in
+//            // this is called on a background thread, but UI updates must
+//            // be on the main thread, like this:
+//            dispatch_async(dispatch_get_main_queue()) {
+//                print("Not reachable")
+//                
+//                let alertController = UIAlertController(title: "No Internet Connection", message: "Please connect your device to the internet", preferredStyle: .Alert)
+//                let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+//                
+//                alertController.addAction(action)
+//                
+//                self.presentViewController(alertController, animated: true, completion: nil)
+//            }
+//        }
+//        
+//        do {
+//            try reachability.startNotifier()
+//        } catch {
+//            print("Unable to start notifier")
+//        }
+        
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"

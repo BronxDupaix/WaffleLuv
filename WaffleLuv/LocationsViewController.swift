@@ -35,22 +35,23 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     //MARK: - View did functions
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        print("Map view will appear")
+
+
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        centerInitialLocation(initialLocation)
+        print("Map view did load")
         
         calApi.fetchCalendar()
         
-        if DataStore.sharedInstance.currentEvents.count == 0 {
-            
-            
-            print("No Trucks available")
-            let alert = UIAlertView(title: "There are currently no trucks available", message: "Our Store hours are Monday-Thursday: 8:00 AM ~ 10:00 PM, Friday-Saturday: 8:00 AM ~ 11:00 PM", delegate: nil, cancelButtonTitle: "OK")
-            alert.show()
-        }
- 
-        print("Map view did load")
+        centerInitialLocation(initialLocation)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LocationsViewController.updateMap), name: kNotificationEventGeocode, object: nil)
         
         createStorePins()
@@ -70,13 +71,25 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        print("viewDidAppear")
+        // print("viewDidAppear")
         
         locationManager.requestWhenInUseAuthorization()
         
         locationManager.requestLocation()
         
         locationsMap.showsUserLocation = true
+        
+        if DataStore.sharedInstance.currentEvents.count == 0 {
+            
+//            let alert = UIAlertController(title: "There are currently no trucks available", message: "Our Store hours are Monday-Thursday: 8:00 AM ~ 10:00 PM, Friday-Saturday: 8:00 AM ~ 11:00 PM", preferredStyle: .Alert)
+//            
+//            
+            
+            print("No Trucks available")
+            let alert = UIAlertView(title: "There are currently no trucks available", message: "Our Store hours are Monday-Thursday: 8:00 AM ~ 10:00 PM, Friday-Saturday: 8:00 AM ~ 11:00 PM", delegate: nil, cancelButtonTitle: "OK")
+            alert.show()
+        }
+
         
 
     }
@@ -91,9 +104,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
             locationsMap.setCenterCoordinate(locationsMap.region.center, animated: false)
             
         }
-
-        
-        
     }
     
     
@@ -157,7 +167,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
                 
                 self.centerMapOnLocation(location!)
                 
-                print("mapview updated")
+               // print("mapview updated")
                 
             }
             
@@ -315,13 +325,13 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     func directionsToLocation(location: String, time: String ) {
         
-        print("Annotation Tapped")
+      //  print("Annotation Tapped")
 
         let alertController = UIAlertController(title: "\(location) (\(time))", message: "Take Me To This Location", preferredStyle: .Alert)
 
         let directionsAction = UIAlertAction(title: "Directions", style: .Default) { (alertAction) -> Void in
             
-            print("Directions Pressed")
+          //  print("Directions Pressed")
             
             let urlString = "https://www.google.com/maps/place/\(location)"
             
@@ -347,7 +357,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { (alertAction) -> Void in
             
-            print("CancelledPressed")
+           // print("CancelledPressed")
         }
 
         alertController.addAction(directionsAction)

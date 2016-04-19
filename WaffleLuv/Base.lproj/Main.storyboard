@@ -14,6 +14,11 @@
             <string>ThirstyScriptRegular</string>
             <string>ThirstyScriptRegular</string>
             <string>ThirstyScriptRegular</string>
+            <string>ThirstyScriptRegular</string>
+            <string>ThirstyScriptRegular</string>
+            <string>ThirstyScriptRegular</string>
+            <string>ThirstyScriptRegular</string>
+            <string>ThirstyScriptRegular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -58,10 +63,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WAFFLE L❤️VE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrp-Cu-16a">
-                                                    <rect key="frame" x="-7" y="5" width="188" height="34"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAFFLE L❤️VE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrp-Cu-16a">
+                                                    <rect key="frame" x="4" y="5" width="207" height="33"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                    <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="26"/>
                                                     <color key="textColor" red="0.99948710203170776" green="0.079100988805294037" blue="0.0037976487074047327" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -88,7 +93,7 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Menu Items" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOU-F5-VDe">
                                                     <rect key="frame" x="30" y="11" width="116" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="17"/>
                                                     <color key="textColor" red="0.16520309406390399" green="1" blue="0.57579053348500098" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -111,9 +116,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-Q0-P2R">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qI0-Q0-P2R">
                                                     <rect key="frame" x="30" y="11" width="74" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.95901442307692308" blue="0.95901442307692308" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -136,9 +141,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Our Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-XZ-BgO">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Our Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-XZ-BgO">
                                                     <rect key="frame" x="30" y="11" width="73.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="17"/>
                                                     <color key="textColor" red="0.98866483276690054" green="0.99266826923076923" blue="0.051121510984195387" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -161,9 +166,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram Feed " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-BS-uV8">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Instagram Feed " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-BS-uV8">
                                                     <rect key="frame" x="30" y="11" width="124" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="17"/>
                                                     <color key="textColor" red="0.93916218691825393" green="0.40514360073193534" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -1047,6 +1052,6 @@ Three years after starting out, we continue to operate on principals of faith, h
         <image name="whiteBanner2" width="300" height="200"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Lxn-dD-xKV"/>
+        <segue reference="Oan-b5-4yz"/>
     </inferredMetricsTieBreakers>
 </document>

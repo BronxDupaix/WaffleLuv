@@ -44,9 +44,9 @@ class CalendarAPI {
                     if item.location != "" {
                     
 
-                        print(item.endDate)
+                       // print(item.endDate)
                     
-                    print("item appended")
+                   // print("item appended")
                         
                         
                         DataStore.sharedInstance.currentEvents.append(item)

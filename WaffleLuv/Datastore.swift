@@ -29,7 +29,7 @@ class DataStore: NSObject {
     
     func geocodeLocations()  {
         
-        print("Geocoding location")
+        // print("Geocoding location")
         
         for event in currentEvents {
             
@@ -46,7 +46,7 @@ class DataStore: NSObject {
                 event.longitude = long
                 
                 NSNotificationCenter.defaultCenter().postNotificationName(kNotificationEventGeocode, object: nil) 
-                print(event.location) 
+               //  print(event.location)
             }
         }
     }
