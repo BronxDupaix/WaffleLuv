@@ -51,12 +51,9 @@ class CalendarEvent {
                 if let date = dateFormatter.dateFromString(dateString) {
                     
                     self.startDate = date
-                    
-                  //  print("This is the startDate \(self.startDate)")
-                    
-                    
+
                 } else {
-                  //  print(" Couldnt convert string to date")
+
                 }
             }
             
@@ -75,15 +72,13 @@ class CalendarEvent {
                 if let date = dateFormatter.dateFromString(endDateString) {
                     
                     self.endDate = date
-                    
-                    // print("this is the endDate\(endDateString)")
-                    
+
                 }
                 
                 
             }
         } else {
-          //  print("Couldnt parse endDate")
+  
         }
         
         

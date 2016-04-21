@@ -25,36 +25,7 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         
         calApi.fetchCalendar()
-        
-//        let reachability: Reachability
-//        do {
-//            reachability = try Reachability.reachabilityForInternetConnection()
-//        } catch {
-//            print("Unable to create Reachability")
-//            return
-//        }
-//        
-//        reachability.whenUnreachable = { reachability in
-//            // this is called on a background thread, but UI updates must
-//            // be on the main thread, like this:
-//            dispatch_async(dispatch_get_main_queue()) {
-//                print("Not reachable")
-//                
-//                let alertController = UIAlertController(title: "No Internet Connection", message: "Please connect your device to the internet", preferredStyle: .Alert)
-//                let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
-//                
-//                alertController.addAction(action)
-//                
-//                self.presentViewController(alertController, animated: true, completion: nil)
-//            }
-//        }
-//        
-//        do {
-//            try reachability.startNotifier()
-//        } catch {
-//            print("Unable to start notifier")
-//        }
-        
+
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
@@ -62,9 +33,7 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         let (_, data) = loadJSONFile("Waffles", fileType: "json")
-        
-       // print(jsonString)
-        
+ 
         if let jsondata = data {
             do {
                 let object = try NSJSONSerialization.JSONObjectWithData(jsondata, options: .AllowFragments)
@@ -248,13 +217,7 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
-//        for w in wafflesArray{
-//            
-//            w.isSelected = false
-//        }
 
-        
         if indexPath.section == 0 {
             
        let waffle = wafflesArray[indexPath.row]

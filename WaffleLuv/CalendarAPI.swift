@@ -35,25 +35,24 @@ class CalendarAPI {
             let startTime = item.startDate
             
             let start = startTime.timeIntervalSince1970
-            
-
+        
             if start <= today {
 
                 if end >= today {
 
                     if item.location != "" {
-                    
-
-                       // print(item.endDate)
-                    
-                   // print("item appended")
                         
+                        let result = self.checkForRepeatingEvents(item)
+                        
+                        if result == false {
                         
                         DataStore.sharedInstance.currentEvents.append(item)
                         
                         DataStore.sharedInstance.numberOFEvents()
                         
                         DataStore.sharedInstance.geocodeLocations()
+                        }
+                        
                     }
                     
                 }
@@ -97,8 +96,7 @@ class CalendarAPI {
                                         let event = CalendarEvent(dict: item)
                                         
                                         self.checkForCurrentEvents(event)
-                                        
-                                        // Pass each individual event into the checkForCurrentEvents and check to see if it meets the requirements?
+
                                     }
                                 }
                                 
@@ -127,6 +125,30 @@ class CalendarAPI {
             
         }
         
+    }
+    
+    
+    
+    func checkForRepeatingEvents(item: CalendarEvent) -> Bool {
+        
+        for event in DataStore.sharedInstance.currentEvents {
+            
+            if item.location == event.location {
+    
+                if item.startDate == event.startDate {
+                    
+                    if item.endDate == event.endDate {
+                        
+                        return true
+                    }
+                }
+                
+            }
+            
+            
+        }
+        
+        return false
     }
     
     

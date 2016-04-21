@@ -19,6 +19,8 @@ class DataStore: NSObject {
     var currentEvents = [CalendarEvent]()
     
     var instaPhotos = [InstaPhoto]()
+    
+    var currentTime = NSDate()
 
     //MARK: - Events Functions
     
@@ -46,7 +48,7 @@ class DataStore: NSObject {
                 event.longitude = long
                 
                 NSNotificationCenter.defaultCenter().postNotificationName(kNotificationEventGeocode, object: nil) 
-               //  print(event.location)
+      
             }
         }
     }
@@ -62,6 +64,21 @@ class DataStore: NSObject {
             }
         }
     }
-
+    
+    
+    func removeOldEvents(){
+        
+        let time = currentTime.timeIntervalSince1970
+        
+        for event in currentEvents{
+            
+            let eventEnd = event.endDate.timeIntervalSince1970
+            
+            if eventEnd >= time {
+                
+            }
+            
+        }
+    }
     
 }

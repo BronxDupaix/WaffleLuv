@@ -38,11 +38,9 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        print("Map view will appear")
-
+        print("Map view will appear") 
 
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,8 +69,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        // print("viewDidAppear")
-        
+
         locationManager.requestWhenInUseAuthorization()
         
         locationManager.requestLocation()
@@ -81,13 +78,16 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         
         if DataStore.sharedInstance.currentEvents.count == 0 {
             
-//            let alert = UIAlertController(title: "There are currently no trucks available", message: "Our Store hours are Monday-Thursday: 8:00 AM ~ 10:00 PM, Friday-Saturday: 8:00 AM ~ 11:00 PM", preferredStyle: .Alert)
-//            
-//            
+            let alert = UIAlertController(title: "There are currently no trucks available", message: "Our Store hours are Monday-Thursday: 8:00 AM ~ 10:00 PM, Friday-Saturday: 8:00 AM ~ 11:00 PM", preferredStyle: .Alert)
             
-            print("No Trucks available")
-            let alert = UIAlertView(title: "There are currently no trucks available", message: "Our Store hours are Monday-Thursday: 8:00 AM ~ 10:00 PM, Friday-Saturday: 8:00 AM ~ 11:00 PM", delegate: nil, cancelButtonTitle: "OK")
-            alert.show()
+            
+            
+            let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
+            
+            alert.addAction(action)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
+            
         }
 
         
@@ -356,8 +356,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { (alertAction) -> Void in
-            
-           // print("CancelledPressed")
+
         }
 
         alertController.addAction(directionsAction)

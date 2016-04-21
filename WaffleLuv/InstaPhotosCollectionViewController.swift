@@ -19,10 +19,7 @@ class InstaPhotosCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.collectionView!.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-
-        
         if DataStore.sharedInstance.instaPhotos.count <= 19 {
             
             instaApi.fetchInstaPhotos()

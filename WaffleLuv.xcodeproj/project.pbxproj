@@ -118,6 +118,7 @@
 			children = (
 				CAE88CEE1CB6102600B96FC2 /* WaffleTableViewCell.swift */,
 				CAE58F821CBC9F3A00956EED /* PhotoCollectionViewCell.swift */,
+				CAE58F521CB84A3300956EED /* CustomAnnotation.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -147,7 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				CAE58F871CBEA9D000956EED /* ThirstyScriptRegular.otf */,
-				CAE58F521CB84A3300956EED /* CustomAnnotation.swift */,
 				CAE58F4C1CB6B97300956EED /* MyColors.swift */,
 				CAE88CEA1CB6084100B96FC2 /* Waffles.json */,
 			);
