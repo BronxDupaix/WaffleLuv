@@ -17,7 +17,7 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if self.revealViewController() != nil {
             navButton.target = self.revealViewController()
-            navButton.action = "revealToggle:"
+            navButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
 
@@ -71,15 +71,19 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
+        var size = UIScreen.mainScreen().bounds.height
+        
         if indexPath.section == 0 {
             
-            return 650
+            return 625
+            
+            
         }
         
         if indexPath.section == 1 {
             
             
-            return 500
+            return 525
         }
         
         if indexPath.section == 2 {
@@ -90,7 +94,7 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if indexPath.section == 3 {
             
-            return 650
+            return 675
         }
         
         return 30 

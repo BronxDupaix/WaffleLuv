@@ -18,7 +18,9 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
     
     var maxY : CGFloat = 500
     
-    let boxSize : CGFloat = 35.0
+    let size = 25.00
+    
+    let boxSize : CGFloat = 25
 
     let startPoint = CGPointMake(50, 50)
     
@@ -92,7 +94,7 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
         
         newBox.layer.masksToBounds = true
         
-        newBox.layer.cornerRadius = 15
+        newBox.layer.cornerRadius = 12.5
         
         let imageName = "waffle"
         
@@ -100,9 +102,10 @@ class EasterEggViewController: UIViewController, UICollisionBehaviorDelegate {
         
         let imageView = UIImageView(image: image!)
         
-        imageView.frame.size = CGSize(width: 30, height: 30)
+        imageView.frame.size = CGSize(width: 25, height: 25)
         
-        imageView.layer.cornerRadius = 15
+        imageView.layer.cornerRadius = 12.5
+        
         
         imageView.layer.masksToBounds = true
         

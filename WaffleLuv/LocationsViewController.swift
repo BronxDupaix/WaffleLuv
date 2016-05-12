@@ -60,7 +60,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
         if self.revealViewController() != nil {
             navButton.target = self.revealViewController()
-            navButton.action = "revealToggle:"
+            navButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
@@ -96,6 +96,8 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     
     func updateMap(location: CLLocation) {
+        
+        print("update map called") 
         
         for event in DataStore.sharedInstance.currentEvents {
             
@@ -324,15 +326,11 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     //MARK: - Directions Alert View
     
     func directionsToLocation(location: String, time: String ) {
-        
-      //  print("Annotation Tapped")
 
         let alertController = UIAlertController(title: "\(location) (\(time))", message: "Take Me To This Location", preferredStyle: .Alert)
 
         let directionsAction = UIAlertAction(title: "Directions", style: .Default) { (alertAction) -> Void in
-            
-          //  print("Directions Pressed")
-            
+
             let urlString = "https://www.google.com/maps/place/\(location)"
             
             let safeURL = urlString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
@@ -347,7 +345,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
             
             self.view.addSubview(self.webView)
             
-            let frame = CGRectMake(0, 60, self.view.bounds.width, self.view.bounds.height-60)
+            let frame = CGRectMake(0, 60, self.view.bounds.width, self.view.bounds.height-60) 
             
             self.webView.frame = frame
             
@@ -358,10 +356,10 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         let cancelAction = UIAlertAction(title: "Cancel", style: .Default) { (alertAction) -> Void in
 
         }
-
-        alertController.addAction(directionsAction)
         
         alertController.addAction(cancelAction)
+        
+        alertController.addAction(directionsAction)
 
         self.presentViewController(alertController, animated: true, completion:nil)
   

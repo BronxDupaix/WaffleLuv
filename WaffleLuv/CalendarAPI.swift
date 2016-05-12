@@ -64,8 +64,8 @@ class CalendarAPI {
     
     func fetchCalendar() {
         
-        print("Fetch calendar called") 
-        
+        print("Fetch calendar called")
+
         for id in calendarIDs {
         
         let urlString = "https://www.googleapis.com/calendar/v3/calendars/\(id)@group.calendar.google.com/events?key=AIzaSyA6hNF8nwtP3iCRa72yFJIhWbjWUfw0rvw&maxResults=9999"
@@ -126,7 +126,6 @@ class CalendarAPI {
         }
         
     }
-    
     
     
     func checkForRepeatingEvents(item: CalendarEvent) -> Bool {

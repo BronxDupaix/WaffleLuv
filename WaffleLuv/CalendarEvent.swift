@@ -33,8 +33,7 @@ class CalendarEvent {
         if let location = dict["location"] as? String {
             
             self.location = location
-            
-           // print(self.location)
+
         } else {
             
           //  print("Couldnt parse location")
@@ -45,9 +44,7 @@ class CalendarEvent {
             if let dateString = startDate["dateTime"] as? String {
                 
                 self.dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
-                
-                // print(dateString)
-                
+
                 if let date = dateFormatter.dateFromString(dateString) {
                     
                     self.startDate = date

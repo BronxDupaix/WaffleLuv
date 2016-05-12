@@ -10,21 +10,16 @@ import UIKit
 
 class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-  
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     @IBOutlet weak var waffleMenu: UITableView!
 
     var wafflesArray = [Waffle]()
     
-    var calApi = CalendarAPI()
-
     //MARK: - View Did load 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        calApi.fetchCalendar()
 
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
@@ -67,20 +62,24 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        if indexPath.section == 0 {
-        
         let waffle = wafflesArray[indexPath.row]
+
+        if indexPath.section == 0 {
         
         let cell = tableView.dequeueReusableCellWithIdentifier("waffleCell") as!WaffleTableViewCell
         
         if waffle.name == "$5 Daily Special" {
             
             cell.nameLabel.textColor = UIColor.whiteColor()
+            
+            cell.wafflePhoto.image = UIImage(named: "ComingSoon")
         }
         
         if waffle.name == "Plain Liege" {
             
             cell.nameLabel.textColor = UIColor.cyanColor()
+            
+            cell.wafflePhoto.image = UIImage(named: "plainLeige")
         }
         
         if waffle.name == "The Churro Waffle"{
@@ -88,6 +87,8 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             let color = MyColors.getCustomlightPurpleColor()
             
             cell.nameLabel.textColor = color
+            
+            cell.wafflePhoto.image = UIImage(named: "ComingSoon")
         }
         
         if waffle.name == "The Cinna Love" {
@@ -95,6 +96,8 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             let color = MyColors.getCustomPinkColor()
             
             cell.nameLabel.textColor = color
+            
+            cell.wafflePhoto.image = UIImage(named: "CinnaLove")
             
         }
         
@@ -131,14 +134,17 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             let color = MyColors.getCustomBananaColor() 
             
             cell.nameLabel.textColor = color
+            
+            cell.wafflePhoto.image = UIImage(named: "bananaCream") 
         }
         
         if waffle.name == "The Sunshine" {
             
-            
             let color = MyColors.getCustomYellowColor()
             
-            cell.nameLabel.textColor = color 
+            cell.nameLabel.textColor = color
+            
+            cell.wafflePhoto.image = UIImage(named: "ComingSoon")
         }
         
         
@@ -157,6 +163,8 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             
             cell.nameLabel.textColor = color
             
+            cell.wafflePhoto.image = UIImage(named: "ComingSoon")
+            
         }
 
         if waffle.name == "Grill Cheese & Bisque"{
@@ -164,6 +172,8 @@ class WaffleMenuViewController: UIViewController, UITableViewDelegate, UITableVi
             let color = MyColors.getCustomOrangeColor()
             
             cell.nameLabel.textColor = color
+            
+            cell.wafflePhoto.image = UIImage(named: "ComingSoon")
         }
         
         cell.backgroundColor = UIColor.clearColor()

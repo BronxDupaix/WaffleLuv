@@ -13,8 +13,12 @@ import CoreLocation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var calAPI = CalendarAPI()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        calAPI.fetchCalendar() 
 
             return true
     }

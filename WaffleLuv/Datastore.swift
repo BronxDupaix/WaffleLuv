@@ -30,9 +30,7 @@ class DataStore: NSObject {
     }
     
     func geocodeLocations()  {
-        
-        // print("Geocoding location")
-        
+
         for event in currentEvents {
             
             geocoding(event.location)  {
@@ -42,19 +40,19 @@ class DataStore: NSObject {
                 let lat: Double = latitude
                 
                 event.latitiude = lat
-
+        
                 let long: Double = longitude
                 
                 event.longitude = long
-                
-                NSNotificationCenter.defaultCenter().postNotificationName(kNotificationEventGeocode, object: nil) 
+
+                NSNotificationCenter.defaultCenter().postNotificationName(kNotificationEventGeocode, object: nil)
       
             }
         }
     }
     
     func geocoding(location: String, completion: (Double, Double) -> ()) {
-        
+
         CLGeocoder().geocodeAddressString(location) { (placemarks, error) in
             if placemarks?.count > 0 {
                 let placemark = placemarks?[0]
@@ -74,7 +72,7 @@ class DataStore: NSObject {
             
             let eventEnd = event.endDate.timeIntervalSince1970
             
-            if eventEnd >= time {
+            if eventEnd <= time {
                 
             }
             
