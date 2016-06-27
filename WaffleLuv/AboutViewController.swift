@@ -70,9 +70,7 @@ class AboutViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        
-        var size = UIScreen.mainScreen().bounds.height
-        
+
         if indexPath.section == 0 {
             
             return 625

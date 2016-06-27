@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -58,7 +58,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WAFFLE L❤️VE  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrp-Cu-16a">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WAFFLE LOVE  " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jrp-Cu-16a">
                                                     <rect key="frame" x="4" y="5" width="236" height="33"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="26"/>
@@ -161,8 +161,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="InstaPhotos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-BS-uV8">
-                                                    <rect key="frame" x="30" y="11" width="163.5" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="InstaPhotos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EP-BS-uV8">
+                                                    <rect key="frame" x="30" y="11" width="113.5" height="22"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                                     <color key="textColor" red="0.93916218691825393" green="0.40514360073193534" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -329,13 +329,6 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1N3-lR-MQe">
-                                                    <rect key="frame" x="12" y="43" width="115" height="115"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="115" id="KRn-fU-6Ia"/>
-                                                        <constraint firstAttribute="height" constant="115" id="UIC-PU-a7f"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5U-kX-HHM">
                                                     <rect key="frame" x="8" y="8" width="49" height="25.5"/>
                                                     <fontDescription key="fontDescription" name="ThirstyScriptRegular" family="Thirsty Script" pointSize="20"/>
@@ -343,55 +336,37 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeZ-Aj-SAc">
-                                                    <rect key="frame" x="250" y="35" width="330" height="21.5"/>
+                                                    <rect key="frame" x="135" y="38" width="445" height="21.5"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1N3-lR-MQe">
+                                                    <rect key="frame" x="12" y="43" width="115" height="115"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="115" id="KRn-fU-6Ia"/>
+                                                        <constraint firstAttribute="height" constant="115" id="UIC-PU-a7f"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="eeZ-Aj-SAc" firstAttribute="leading" secondItem="1N3-lR-MQe" secondAttribute="trailing" constant="25" id="1Gi-jL-1KS"/>
                                                 <constraint firstItem="eeZ-Aj-SAc" firstAttribute="width" secondItem="LS7-Rr-9Ji" secondAttribute="width" multiplier="0.55" id="6ha-G8-JLL"/>
                                                 <constraint firstItem="B5U-kX-HHM" firstAttribute="leading" secondItem="LS7-Rr-9Ji" secondAttribute="leading" constant="8" id="7jD-jZ-5p0"/>
                                                 <constraint firstItem="1N3-lR-MQe" firstAttribute="leading" secondItem="LS7-Rr-9Ji" secondAttribute="leading" constant="12" id="9cz-fw-x7b"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eeZ-Aj-SAc" secondAttribute="trailing" constant="16" id="DAz-LB-gqa"/>
-                                                <constraint firstItem="B5U-kX-HHM" firstAttribute="centerY" secondItem="LS7-Rr-9Ji" secondAttribute="centerY" id="JfX-AJ-hBS"/>
-                                                <constraint firstItem="ZT0-TM-Tyg" firstAttribute="centerY" secondItem="LS7-Rr-9Ji" secondAttribute="centerY" id="Jzz-w9-Vna"/>
+                                                <constraint firstItem="eeZ-Aj-SAc" firstAttribute="leading" secondItem="1N3-lR-MQe" secondAttribute="trailing" constant="8" id="CoR-rX-E9s"/>
                                                 <constraint firstItem="1N3-lR-MQe" firstAttribute="top" secondItem="LS7-Rr-9Ji" secondAttribute="topMargin" constant="35" id="K3c-da-TzP"/>
-                                                <constraint firstItem="1N3-lR-MQe" firstAttribute="centerX" secondItem="LS7-Rr-9Ji" secondAttribute="centerX" id="MQ3-cx-xQK"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="eeZ-Aj-SAc" secondAttribute="trailing" constant="12" id="OG5-M1-AkK"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="eeZ-Aj-SAc" secondAttribute="trailing" constant="12" id="P99-DQ-Jrw"/>
-                                                <constraint firstAttribute="trailing" secondItem="eeZ-Aj-SAc" secondAttribute="trailing" constant="12" id="PWu-oq-1Yd"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZT0-TM-Tyg" secondAttribute="trailing" constant="12" id="Xi0-LF-2kQ"/>
-                                                <constraint firstItem="1N3-lR-MQe" firstAttribute="top" secondItem="LS7-Rr-9Ji" secondAttribute="topMargin" constant="50" id="dIv-Wb-jcW"/>
-                                                <constraint firstItem="eeZ-Aj-SAc" firstAttribute="leading" secondItem="B5U-kX-HHM" secondAttribute="trailing" constant="6" id="fVU-Zk-nbe"/>
-                                                <constraint firstAttribute="bottom" secondItem="1N3-lR-MQe" secondAttribute="bottom" constant="15" id="hjW-RJ-uKr"/>
-                                                <constraint firstItem="1N3-lR-MQe" firstAttribute="top" secondItem="eeZ-Aj-SAc" secondAttribute="bottom" constant="45" id="izw-7x-L9I"/>
-                                                <constraint firstItem="1N3-lR-MQe" firstAttribute="leading" secondItem="LS7-Rr-9Ji" secondAttribute="leading" constant="15" id="m7R-yY-zdE"/>
                                                 <constraint firstItem="B5U-kX-HHM" firstAttribute="top" secondItem="LS7-Rr-9Ji" secondAttribute="top" constant="8" id="oxT-JM-nxm"/>
-                                                <constraint firstItem="eeZ-Aj-SAc" firstAttribute="centerY" secondItem="LS7-Rr-9Ji" secondAttribute="centerY" id="pcI-kG-kG2"/>
                                                 <constraint firstItem="ZT0-TM-Tyg" firstAttribute="top" secondItem="LS7-Rr-9Ji" secondAttribute="top" constant="13" id="q8B-Qv-Uch"/>
-                                                <constraint firstItem="eeZ-Aj-SAc" firstAttribute="top" secondItem="LS7-Rr-9Ji" secondAttribute="top" constant="35" id="qpT-mW-z1B"/>
+                                                <constraint firstItem="eeZ-Aj-SAc" firstAttribute="top" secondItem="LS7-Rr-9Ji" secondAttribute="top" constant="38" id="qpT-mW-z1B"/>
                                                 <constraint firstItem="eeZ-Aj-SAc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1N3-lR-MQe" secondAttribute="trailing" constant="6" id="rYn-MK-rjX"/>
-                                                <constraint firstAttribute="bottom" secondItem="1N3-lR-MQe" secondAttribute="bottom" constant="8.5" id="wxY-dQ-QXu"/>
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="JfX-AJ-hBS"/>
-                                                    <exclude reference="MQ3-cx-xQK"/>
-                                                    <exclude reference="dIv-Wb-jcW"/>
-                                                    <exclude reference="hjW-RJ-uKr"/>
-                                                    <exclude reference="izw-7x-L9I"/>
-                                                    <exclude reference="m7R-yY-zdE"/>
-                                                    <exclude reference="wxY-dQ-QXu"/>
-                                                    <exclude reference="1Gi-jL-1KS"/>
-                                                    <exclude reference="DAz-LB-gqa"/>
-                                                    <exclude reference="OG5-M1-AkK"/>
-                                                    <exclude reference="PWu-oq-1Yd"/>
-                                                    <exclude reference="fVU-Zk-nbe"/>
-                                                    <exclude reference="pcI-kG-kG2"/>
-                                                    <exclude reference="Jzz-w9-Vna"/>
+                                                    <exclude reference="6ha-G8-JLL"/>
+                                                    <exclude reference="rYn-MK-rjX"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -826,8 +801,8 @@
                                                         <constraint firstItem="ei0-IL-Pom" firstAttribute="centerX" secondItem="dfX-1S-hit" secondAttribute="centerX" id="jte-fj-FEs"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="S0l-Ij-e7E">
-                                                    <rect key="frame" x="30" y="133" width="540" height="279"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="S0l-Ij-e7E">
+                                                    <rect key="frame" x="30" y="136" width="540" height="285.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="279" id="FKV-tV-XRF"/>
                                                     </constraints>
@@ -873,11 +848,11 @@ This Instagram post from November 2013 posted by Melissa Terry describes pretty 
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="45"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="97V-fy-Rz3">
-                                                    <rect key="frame" x="60" y="9" width="480" height="654"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="97V-fy-Rz3">
+                                                    <rect key="frame" x="45" y="9" width="510" height="15"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="AdamTerryAndKids" translatesAutoresizingMaskIntoConstraints="NO" id="808-LD-H5k">
-                                                            <rect key="frame" x="0.0" y="0.0" width="480" height="654"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AdamTerryAndKids" translatesAutoresizingMaskIntoConstraints="NO" id="808-LD-H5k">
+                                                            <rect key="frame" x="0.0" y="0.0" width="510" height="15"/>
                                                         </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -888,8 +863,8 @@ This Instagram post from November 2013 posted by Melissa Terry describes pretty 
                                                         <constraint firstItem="808-LD-H5k" firstAttribute="centerY" secondItem="97V-fy-Rz3" secondAttribute="centerY" id="h9N-4F-Ukx"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="kTe-iH-THl">
-                                                    <rect key="frame" x="30" y="27" width="540" height="12.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="kTe-iH-THl">
+                                                    <rect key="frame" x="30" y="26" width="540" height="30.5"/>
                                                     <string key="text">"Adam had always wanted to own his own restaurant, &amp; I always discouraged the idea. It seemed like there was too much to lose. But when a local restaurant went up for sale, and Adam said he'd like to make an offer on it, all my reasons to be scared were gone. So I smiled &amp; said, 'Okay.' He pitched the owner his best proposal, and the man selling the restaurant pretty much laughed him to scorn. (And really, we can't blame him.) After laying out the plan of how he was going to resurrect that business, he realized that was exactly what he was going to do, but for himself instead of someone else. So he got to work. He turned an old insurance office into a kitchen, and a $1,300 vintage step van into a food truck. With the help of our families, we painted, and plumbed and perfected recipes and set a date to open to the public. </string>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -925,8 +900,8 @@ This Instagram post from November 2013 posted by Melissa Terry describes pretty 
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WaffleLovePaint" translatesAutoresizingMaskIntoConstraints="NO" id="Xcw-bX-1vR">
                                                     <rect key="frame" x="60" y="0.0" width="480" height="0.0"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="byo-i8-POy">
-                                                    <rect key="frame" x="30" y="5" width="540" height="109"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="byo-i8-POy">
+                                                    <rect key="frame" x="30" y="5" width="540" height="0.0"/>
                                                     <string key="text">"We were exhausted, and had given it EVERYTHING, but at the end of the day, we just had to hope that people would come. ...and this is where I get emotional.
 
 "You came. You came in 100 degree weather. You came when it was six below. You came and took pictures, and told your friends to come. You offered your driveways to us, and some of you even wrote to The City Councils for us. When our transmission broke down, when our engine was blown, when we were stuck in the snow, you helped us. </string>
@@ -968,8 +943,8 @@ This Instagram post from November 2013 posted by Melissa Terry describes pretty 
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WaffleLoveMission" translatesAutoresizingMaskIntoConstraints="NO" id="15M-XG-gwq">
                                                     <rect key="frame" x="60" y="8" width="480" height="129"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="an5-Kx-B2f">
-                                                    <rect key="frame" x="30" y="141" width="540" height="124.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="an5-Kx-B2f">
+                                                    <rect key="frame" x="30" y="142" width="540" height="110.5"/>
                                                     <string key="text">"I don't know most of you, but I am overwhelmed with gratitude for you. I wish I could personally thank each one of you. I can't think about it long before crying because, you turned that knob for us. Thank you thank you thank you."
 
 Three years after starting out, we continue to operate on principals of faith, hard work, and community. We continue to be blown away by the kindness, enthusiasm, and goodness of the people we get to serve everyday. Love has always been, and will always be the main ingredient in Waffle Love. </string>

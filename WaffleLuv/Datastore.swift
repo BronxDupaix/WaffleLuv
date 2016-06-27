@@ -44,6 +44,8 @@ class DataStore: NSObject {
                 let long: Double = longitude
                 
                 event.longitude = long
+                
+                print(" Calling notification event") 
 
                 NSNotificationCenter.defaultCenter().postNotificationName(kNotificationEventGeocode, object: nil)
       

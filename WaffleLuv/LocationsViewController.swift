@@ -50,8 +50,9 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
         calApi.fetchCalendar()
         
         centerInitialLocation(initialLocation)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LocationsViewController.updateMap), name: kNotificationEventGeocode, object: nil)
         
+         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LocationsViewController.updateMap), name: kNotificationEventGeocode, object: nil)
+
         createStorePins()
 
         locationManager.delegate = self
@@ -69,7 +70,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-
         locationManager.requestWhenInUseAuthorization()
         
         locationManager.requestLocation()
@@ -80,8 +80,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
             
             let alert = UIAlertController(title: "There are currently no trucks available", message: "Our Store hours are Monday-Thursday: 8:00 AM ~ 10:00 PM, Friday-Saturday: 8:00 AM ~ 11:00 PM", preferredStyle: .Alert)
             
-            
-            
             let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
             
             alert.addAction(action)
@@ -89,9 +87,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
             self.presentViewController(alert, animated: true, completion: nil)
             
         }
-
-        
-
     }
     
     
@@ -125,7 +120,6 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         
-        
         print("didChangeAuthStatus")
         
         switch(status) {
@@ -146,7 +140,7 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
 
         if locations.count > 0 {
-            
+
             let location = locations.first
             
             self.updateMap(location!)
@@ -160,11 +154,15 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
                self.locationsMap.setRegion(region, animated: true)
                 
                 let currentLocation = MKPointAnnotation()
-                
+
                 currentLocation.coordinate = CLLocationCoordinate2D(latitude: center.latitude, longitude: center.longitude)
                 
                 currentLocation.title = "Your current location"
-
+                
+                currentLocation.subtitle = "Time"
+                
+                // Giving current location subtitle doesnt work still shows nil
+                
                 self.locationsMap.showsUserLocation = true
                 
                 self.centerMapOnLocation(location!)
@@ -193,6 +191,8 @@ class LocationsViewController: UIViewController,  CLLocationManagerDelegate, MKM
             if let time = view.annotation!.subtitle {
                 
                 self.directionsToLocation(location!, time: time!)
+                
+                // Code Crashes when user location pin is clicked.
             }
             
             
